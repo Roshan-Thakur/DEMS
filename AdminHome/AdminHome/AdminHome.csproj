@@ -1,0 +1,2272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B280854-0EB3-4F16-BB2C-7D2861316162}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdminHome</RootNamespace>
+    <AssemblyName>AdminHome</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\officedll\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\ddd\itextsharp-all-5.5.10\itextsharp-dll-core-wo_Drawing\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\..\ddd\itextsharp-all-5.5.10\itextsharp-dll-pdfa\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="WarstarDev.Office2k7">
+      <HintPath>..\..\officedll\WarstarDev.Office2k7.dll</HintPath>
+    </Reference>
+    <Reference Include="WarstarDev.Office2k7.Demo">
+      <HintPath>..\..\officedll\WarstarDev.Office2k7.Demo.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccademicManagement\AdmissionDetails1.aspx" />
+    <Content Include="AccademicManagement\AdmissionForm.aspx" />
+    <Content Include="AccademicManagement\AdmissionUpdateForm.aspx" />
+    <Content Include="AccademicManagement\AllowStudentSit.aspx" />
+    <Content Include="AccademicManagement\BatchAsign.aspx" />
+    <Content Include="AccademicManagement\HomeStudentAccademic.aspx" />
+    <Content Include="AccademicManagement\HomeStudentInfoReport.aspx" />
+    <Content Include="AccademicManagement\PermotedStudentList.aspx" />
+    <Content Include="AccademicManagement\StudentPermotion.aspx" />
+    <Content Include="AccademicManagement\StudentProfilePage.aspx" />
+    <Content Include="AccademicManagement\StudentReport.aspx" />
+    <Content Include="AdminControlPanel\AddSuperAdmin.aspx" />
+    <Content Include="AdminControlPanel\AdminHomeTable.aspx" />
+    <Content Include="AdminControlPanel\AdminProfile.aspx" />
+    <Content Include="AdminFinanance\AdminFinanaceManagement.aspx" />
+    <Content Include="AdminFinanance\HomeFineManagement.aspx" />
+    <Content Include="AdminFinanance\HomeFineReport.aspx" />
+    <Content Include="AdminFinance.aspx" />
+    <Content Include="Adminforget.aspx" />
+    <Content Include="AdminLogIn.aspx" />
+    <Content Include="AdminProfile.aspx" />
+    <Content Include="AdminSettingView\AcademicSetting.aspx" />
+    <Content Include="AdminSettingView\AddBatchlistfrm.aspx" />
+    <Content Include="AdminSettingView\AddBloodReligionDeprtfrm.aspx" />
+    <Content Include="AdminSettingView\AddBoard.aspx" />
+    <Content Include="AdminSettingView\AddClass.aspx" />
+    <Content Include="AdminSettingView\AddClassGroupList.aspx" />
+    <Content Include="AdminSettingView\AddClassSectionList.aspx" />
+    <Content Include="AdminSettingView\AddGroupfrm.aspx" />
+    <Content Include="AdminSettingView\AddManagementShift.aspx" />
+    <Content Include="AdminSettingView\AddSchoolCollegeSetupfrm.aspx" />
+    <Content Include="AdminSettingView\AddSectionForm.aspx" />
+    <Content Include="AdminSettingView\DistrictStateManagementfrm.aspx" />
+    <Content Include="AdminSettingView\GeneralSetting.aspx" />
+    <Content Include="AdminSettingView\SessionAdd.aspx" />
+    <Content Include="AdminSettingView\SettingHome.aspx" />
+    <Content Include="AdminTable.aspx" />
+    <Content Include="AdmissionForm.aspx" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-animate.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-animate.min.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-aria.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-aria.min.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-cookies.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-cookies.min.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-csp.css" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-loader.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-loader.min.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-message-format.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-message-format.min.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-messages.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-messages.min.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-mocks.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-parse-ext.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-parse-ext.min.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-resource.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-resource.min.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-route.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-route.min.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-sanitize.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-sanitize.min.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-scenario.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-touch.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-touch.min.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular.min.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_af-na.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_af-za.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_af.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_agq-cm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_agq.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ak-gh.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ak.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_am-et.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_am.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-001.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-ae.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-bh.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-dj.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-dz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-eg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-eh.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-er.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-il.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-iq.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-jo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-km.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-kw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-lb.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-ly.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-ma.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-mr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-om.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-ps.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-qa.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-sa.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-sd.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-so.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-ss.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-sy.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-td.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-tn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-xb.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar-ye.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ar.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_as-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_as.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_asa-tz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_asa.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ast-es.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ast.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_az-cyrl-az.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_az-cyrl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_az-latn-az.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_az-latn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_az.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bas-cm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bas.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_be-by.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_be.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bem-zm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bem.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bez-tz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bez.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bg-bg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bm-ml.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bn-bd.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bn-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bo-cn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bo-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_br-fr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_br.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_brx-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_brx.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bs-cyrl-ba.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bs-cyrl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bs-latn-ba.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bs-latn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_bs.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ca-ad.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ca-es-valencia.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ca-es.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ca-fr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ca-it.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ca.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ce-ru.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ce.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_cgg-ug.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_cgg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_chr-us.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_chr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ckb-arab-iq.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ckb-arab-ir.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ckb-arab.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ckb-iq.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ckb-ir.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ckb-latn-iq.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ckb-latn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ckb.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_cs-cz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_cs.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_cu-ru.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_cu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_cy-gb.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_cy.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_da-dk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_da-gl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_da.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_dav-ke.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_dav.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_de-at.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_de-be.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_de-ch.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_de-de.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_de-li.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_de-lu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_de.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_dje-ne.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_dje.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_dsb-de.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_dsb.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_dua-cm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_dua.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_dyo-sn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_dyo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_dz-bt.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_dz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ebu-ke.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ebu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ee-gh.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ee-tg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ee.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_el-cy.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_el-gr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_el.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-001.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-150.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-ag.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-ai.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-as.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-at.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-au.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-bb.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-be.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-bi.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-bm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-bs.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-bw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-bz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-ca.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-cc.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-ch.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-ck.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-cm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-cx.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-cy.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-de.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-dg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-dk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-dm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-er.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-fi.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-fj.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-fk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-fm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-gb.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-gd.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-gg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-gh.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-gi.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-gm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-gu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-gy.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-hk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-ie.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-il.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-im.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-io.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-iso.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-je.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-jm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-ke.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-ki.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-kn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-ky.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-lc.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-lr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-ls.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-mg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-mh.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-mo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-mp.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-ms.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-mt.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-mu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-mw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-my.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-na.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-nf.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-ng.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-nl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-nr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-nu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-nz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-pg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-ph.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-pk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-pn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-pr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-pw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-rw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-sb.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-sc.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-sd.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-se.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-sg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-sh.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-si.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-sl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-ss.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-sx.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-sz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-tc.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-tk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-to.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-tt.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-tv.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-tz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-ug.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-um.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-us.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-vc.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-vg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-vi.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-vu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-ws.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-xa.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-za.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-zm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en-zw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_en.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_eo-001.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_eo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-419.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-ar.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-bo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-br.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-cl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-co.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-cr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-cu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-do.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-ea.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-ec.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-es.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-gq.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-gt.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-hn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-ic.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-mx.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-ni.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-pa.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-pe.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-ph.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-pr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-py.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-sv.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-us.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-uy.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es-ve.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_es.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_et-ee.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_et.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_eu-es.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_eu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ewo-cm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ewo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fa-af.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fa-ir.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fa.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ff-cm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ff-gn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ff-mr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ff-sn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ff.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fi-fi.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fi.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fil-ph.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fil.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fo-dk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fo-fo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-be.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-bf.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-bi.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-bj.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-bl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-ca.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-cd.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-cf.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-cg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-ch.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-ci.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-cm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-dj.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-dz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-fr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-ga.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-gf.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-gn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-gp.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-gq.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-ht.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-km.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-lu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-ma.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-mc.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-mf.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-mg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-ml.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-mq.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-mr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-mu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-nc.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-ne.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-pf.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-pm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-re.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-rw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-sc.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-sn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-sy.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-td.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-tg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-tn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-vu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-wf.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr-yt.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fur-it.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fur.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fy-nl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_fy.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ga-ie.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ga.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_gd-gb.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_gd.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_gl-es.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_gl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_gsw-ch.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_gsw-fr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_gsw-li.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_gsw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_gu-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_gu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_guz-ke.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_guz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_gv-im.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_gv.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ha-gh.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ha-ne.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ha-ng.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ha.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_haw-us.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_haw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_he-il.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_he.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_hi-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_hi.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_hr-ba.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_hr-hr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_hr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_hsb-de.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_hsb.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_hu-hu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_hu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_hy-am.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_hy.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_id-id.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_id.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ig-ng.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ig.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ii-cn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ii.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_is-is.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_is.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_it-ch.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_it-it.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_it-sm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_it.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_iw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ja-jp.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ja.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_jgo-cm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_jgo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_jmc-tz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_jmc.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ka-ge.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ka.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kab-dz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kab.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kam-ke.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kam.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kde-tz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kde.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kea-cv.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kea.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_khq-ml.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_khq.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ki-ke.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ki.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kk-kz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kkj-cm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kkj.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kl-gl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kln-ke.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kln.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_km-kh.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_km.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kn-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ko-kp.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ko-kr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ko.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kok-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kok.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ks-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ks.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ksb-tz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ksb.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ksf-cm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ksf.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ksh-de.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ksh.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kw-gb.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_kw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ky-kg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ky.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lag-tz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lag.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lb-lu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lb.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lg-ug.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lkt-us.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lkt.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ln-ao.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ln-cd.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ln-cf.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ln-cg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ln.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lo-la.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lrc-iq.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lrc-ir.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lrc.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lt-lt.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lt.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lu-cd.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_luo-ke.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_luo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_luy-ke.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_luy.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lv-lv.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_lv.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mas-ke.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mas-tz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mas.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mer-ke.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mer.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mfe-mu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mfe.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mg-mg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mgh-mz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mgh.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mgo-cm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mgo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mk-mk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ml-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ml.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mn-mn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mr-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ms-bn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ms-my.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ms-sg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ms.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mt-mt.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mt.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mua-cm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mua.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_my-mm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_my.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mzn-ir.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_mzn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_naq-na.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_naq.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nb-no.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nb-sj.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nb.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nd-zw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nd.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ne-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ne-np.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ne.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nl-aw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nl-be.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nl-bq.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nl-cw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nl-nl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nl-sr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nl-sx.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nmg-cm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nmg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nn-no.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nnh-cm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nnh.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_no-no.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_no.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nus-ss.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nus.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nyn-ug.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_nyn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_om-et.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_om-ke.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_om.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_or-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_or.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_os-ge.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_os-ru.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_os.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pa-arab-pk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pa-arab.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pa-guru-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pa-guru.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pa.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pl-pl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_prg-001.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_prg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ps-af.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ps.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pt-ao.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pt-br.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pt-ch.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pt-cv.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pt-gq.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pt-gw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pt-lu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pt-mo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pt-mz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pt-pt.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pt-st.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pt-tl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_pt.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_qu-bo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_qu-ec.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_qu-pe.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_qu.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_rm-ch.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_rm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_rn-bi.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_rn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ro-md.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ro-ro.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ro.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_rof-tz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_rof.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ru-by.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ru-kg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ru-kz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ru-md.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ru-ru.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ru-ua.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ru.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_rw-rw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_rw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_rwk-tz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_rwk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sah-ru.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sah.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_saq-ke.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_saq.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sbp-tz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sbp.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_se-fi.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_se-no.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_se-se.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_se.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_seh-mz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_seh.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ses-ml.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ses.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sg-cf.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_shi-latn-ma.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_shi-latn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_shi-tfng-ma.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_shi-tfng.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_shi.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_si-lk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_si.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sk-sk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sl-si.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_smn-fi.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_smn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sn-zw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_so-dj.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_so-et.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_so-ke.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_so-so.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_so.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sq-al.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sq-mk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sq-xk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sq.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sr-cyrl-ba.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sr-cyrl-me.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sr-cyrl-rs.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sr-cyrl-xk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sr-cyrl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sr-latn-ba.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sr-latn-me.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sr-latn-rs.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sr-latn-xk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sr-latn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sv-ax.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sv-fi.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sv-se.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sv.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sw-cd.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sw-ke.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sw-tz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sw-ug.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_sw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ta-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ta-lk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ta-my.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ta-sg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ta.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_te-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_te.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_teo-ke.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_teo-ug.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_teo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_th-th.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_th.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ti-er.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ti-et.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ti.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_tk-tm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_tk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_tl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_to-to.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_to.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_tr-cy.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_tr-tr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_tr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_twq-ne.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_twq.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_tzm-ma.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_tzm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ug-cn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ug.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_uk-ua.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_uk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ur-in.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ur-pk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_ur.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_uz-arab-af.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_uz-arab.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_uz-cyrl-uz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_uz-cyrl.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_uz-latn-uz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_uz-latn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_uz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_vai-latn-lr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_vai-latn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_vai-vaii-lr.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_vai-vaii.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_vai.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_vi-vn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_vi.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_vo-001.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_vo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_vun-tz.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_vun.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_wae-ch.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_wae.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_xog-ug.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_xog.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_yav-cm.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_yav.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_yi-001.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_yi.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_yo-bj.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_yo-ng.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_yo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_yue-hk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_yue.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_zgh-ma.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_zgh.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_zh-cn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_zh-hans-cn.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_zh-hans-hk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_zh-hans-mo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_zh-hans-sg.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_zh-hans.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_zh-hant-hk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_zh-hant-mo.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_zh-hant-tw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_zh-hant.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_zh-hk.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_zh-tw.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_zh.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_zu-za.js" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\angular-locale_zu.js" />
+    <Content Include="AttendenceSystem\FeeMgt\AddmissionFeeCategory.aspx" />
+    <Content Include="AttendenceSystem\FeeMgt\AddmissionFeeCollection.aspx" />
+    <Content Include="AttendenceSystem\FeeMgt\AddmissnFeeParti.aspx" />
+    <Content Include="AttendenceSystem\FeeMgt\CollectionDetails.aspx" />
+    <Content Include="AttendenceSystem\FeeMgt\Discount.aspx" />
+    <Content Include="AttendenceSystem\FeeMgt\FeeCollecDetails.aspx" />
+    <Content Include="AttendenceSystem\FeeMgt\FeeCollection.aspx" />
+    <Content Include="AttendenceSystem\FeeMgt\FeeParticular.aspx" />
+    <Content Include="AttendenceSystem\FeeMgt\FreeCatogry.aspx" />
+    <Content Include="AttendenceSystem\FeeMgt\Partyculary.aspx" />
+    <Content Include="AttendenceSystem\FinanceReport\DiscountReport.aspx" />
+    <Content Include="AttendenceSystem\FinanceReport\FeeCollectionDetails.aspx" />
+    <Content Include="AttendenceSystem\FinanceReport\FineReport.aspx" />
+    <Content Include="AttendenceSystem\FineMgt\StuFineCollect.aspx" />
+    <Content Include="bin\AdminHome.dll" />
+    <Content Include="bin\AdminHome.pdb" />
+    <Content Include="bin\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\Microsoft.QualityTools.Testing.Fakes.dll" />
+    <Content Include="bin\WarstarDev.Office2k7.Demo.exe" />
+    <Content Include="bin\WarstarDev.Office2k7.dll" />
+    <Content Include="bootstrap.3.3.7\bootstrap-timepicker\bootstaptimer\css\bootstrap-timepicker.css" />
+    <Content Include="bootstrap.3.3.7\bootstrap-timepicker\bootstaptimer\css\bootstrap-timepicker.min.css" />
+    <Content Include="bootstrap.3.3.7\bootstrap-timepicker\bootstaptimer\js\bootstrap-timepicker.js" />
+    <Content Include="bootstrap.3.3.7\bootstrap-timepicker\bootstaptimer\js\bootstrap-timepicker.min.js" />
+    <Content Include="bootstrap.3.3.7\ButtonCssDiv.css" />
+    <Content Include="bootstrap.3.3.7\content\ButtonDiv\Buttondivbootcss.css" />
+    <Content Include="bootstrap.3.3.7\content\Content\bootstrap-theme.css" />
+    <Content Include="bootstrap.3.3.7\content\Content\bootstrap-theme.min.css" />
+    <Content Include="bootstrap.3.3.7\content\Content\bootstrap.css" />
+    <Content Include="bootstrap.3.3.7\content\Content\bootstrap.min.css" />
+    <Content Include="bootstrap.3.3.7\content\Content\mybootstrap.css" />
+    <Content Include="bootstrap.3.3.7\content\Scripts\bootstrap.js" />
+    <Content Include="bootstrap.3.3.7\content\Scripts\bootstrap.min.js" />
+    <Content Include="bootstrap.3.3.7\content\Scripts\statedistrict.js" />
+    <Content Include="bootstrap.3.3.7\DigitalClock\alarm.mp3" />
+    <Content Include="bootstrap.3.3.7\DigitalClock\css\main.css" />
+    <Content Include="bootstrap.3.3.7\DigitalClock\img\vignette.png" />
+    <Content Include="bootstrap.3.3.7\DigitalClock\index.html" />
+    <Content Include="bootstrap.3.3.7\DigitalClock\js\jquery.thooClock.js" />
+    <Content Include="bootstrap.3.3.7\jquery-timepicker-1.3.5\jquery.timepicker.css" />
+    <Content Include="bootstrap.3.3.7\jquery-timepicker-1.3.5\jquery.timepicker.js" />
+    <Content Include="bootstrap.3.3.7\jquery-timepicker-1.3.5\jquery.timepicker.min.css" />
+    <Content Include="bootstrap.3.3.7\jquery-timepicker-1.3.5\jquery.timepicker.min.js" />
+    <Content Include="bootstrap.3.3.7\myChatboxcss.css" />
+    <Content Include="bootstrap.3.3.7\MycssTableHover.css" />
+    <Content Include="bootstrap.3.3.7\MyjavaScriptTableHover.js" />
+    <Content Include="bootstrap.3.3.7\pdfjs\html2canvas.js" />
+    <Content Include="bootstrap.3.3.7\pdfjs\images\csv.png" />
+    <Content Include="bootstrap.3.3.7\pdfjs\images\json.jpg" />
+    <Content Include="bootstrap.3.3.7\pdfjs\images\pdf.png" />
+    <Content Include="bootstrap.3.3.7\pdfjs\images\png.png" />
+    <Content Include="bootstrap.3.3.7\pdfjs\images\ppt.png" />
+    <Content Include="bootstrap.3.3.7\pdfjs\images\sql.png" />
+    <Content Include="bootstrap.3.3.7\pdfjs\images\txt.png" />
+    <Content Include="bootstrap.3.3.7\pdfjs\images\word.png" />
+    <Content Include="bootstrap.3.3.7\pdfjs\images\xls.png" />
+    <Content Include="bootstrap.3.3.7\pdfjs\images\xml.png" />
+    <Content Include="bootstrap.3.3.7\pdfjs\jquery.base64.js" />
+    <Content Include="bootstrap.3.3.7\pdfjs\jspdf\jspdf.js" />
+    <Content Include="bootstrap.3.3.7\pdfjs\jspdf\libs\base64.js" />
+    <Content Include="bootstrap.3.3.7\pdfjs\jspdf\libs\sprintf.js" />
+    <Content Include="bootstrap.3.3.7\pdfjs\tableExport.js" />
+    <Content Include="bootstrap.3.3.7\SidebarBootstrap.css" />
+    <Content Include="bootstrap.3.3.7\Sidebarcssjs\css\reset.css" />
+    <Content Include="bootstrap.3.3.7\Sidebarcssjs\css\style.css" />
+    <Content Include="bootstrap.3.3.7\Sidebarcssjs\img\cd-avatar.png" />
+    <Content Include="bootstrap.3.3.7\Sidebarcssjs\js\jquery-2.1.4.js" />
+    <Content Include="bootstrap.3.3.7\Sidebarcssjs\js\jquery.menu-aim.js" />
+    <Content Include="bootstrap.3.3.7\Sidebarcssjs\js\main.js" />
+    <Content Include="bootstrap.3.3.7\Sidebarcssjs\js\modernizr.js" />
+    <Content Include="bootstrap.3.3.7\Sidebarjs.js" />
+    <Content Include="ControlPanelDiv\AddStudentAccount.aspx" />
+    <Content Include="ControlPanelDiv\AdduserAccount.aspx" />
+    <Content Include="ControlPanelDiv\HomeControl.aspx" />
+    <Content Include="ControlPanelDiv\StudentAccountList.aspx" />
+    <Content Include="ControlPanelDiv\StudentOldPassSet.aspx" />
+    <Content Include="ControlPanelDiv\UserAccountList.aspx" />
+    <Content Include="ControlPanelDiv\UserOldPassSet.aspx" />
+    <Content Include="CurrentStudentInfo.aspx" />
+    <Content Include="dark_background_texture_86809_1920x1080.jpg" />
+    <Content Include="Default.aspx" />
+    <Content Include="bootstrap.3.3.7\images\face.jpg" />
+    <Content Include="demoModel.aspx" />
+    <Content Include="demousercontrol.aspx" />
+    <Content Include="Dems\about-us.aspx" />
+    <Content Include="Dems\css\assets\new-left-arrow.jpg" />
+    <Content Include="Dems\css\assets\new-left-hover-arrow.jpg" />
+    <Content Include="Dems\css\assets\new-right-arrow.jpg" />
+    <Content Include="Dems\css\assets\new-right-hover-arrow.jpg" />
+    <Content Include="Dems\css\bootstrap.min.css" />
+    <Content Include="Dems\css\font-awesome.css" />
+    <Content Include="Dems\css\reset.css" />
+    <Content Include="Dems\css\responsive.css" />
+    <Content Include="Dems\css\rev-slider\settings.css" />
+    <Content Include="Dems\css\style.css" />
+    <Content Include="Dems\event.aspx" />
+    <Content Include="Dems\img\about-us-banner.jpg" />
+    <Content Include="Dems\img\about-us-right.jpg" />
+    <Content Include="Dems\img\contact-us.jpg" />
+    <Content Include="Dems\img\event-banner.jpg" />
+    <Content Include="Dems\img\fav-icon.png" />
+    <Content Include="Dems\img\footer-bg.jpg" />
+    <Content Include="Dems\img\logo-img.png" />
+    <Content Include="Dems\img\news-banner.jpg" />
+    <Content Include="Dems\img\our-people-banner.jpg" />
+    <Content Include="Dems\img\r1.jpg" />
+    <Content Include="Dems\img\r2.jpg" />
+    <Content Include="Dems\img\r3.jpg" />
+    <Content Include="Dems\img\r4.jpg" />
+    <Content Include="Dems\img\r5.jpg" />
+    <Content Include="Dems\img\r6.jpg" />
+    <Content Include="Dems\img\rev-slider\banner.jpg" />
+    <Content Include="Dems\img\rev-slider\banner1.jpg" />
+    <Content Include="Dems\img\rev-slider\banner3.jpg" />
+    <Content Include="Dems\img\s1.jpg" />
+    <Content Include="Dems\img\s2.jpg" />
+    <Content Include="Dems\img\s3.jpg" />
+    <Content Include="Dems\img\s4.jpg" />
+    <Content Include="Dems\img\s5.jpg" />
+    <Content Include="Dems\img\s6.jpg" />
+    <Content Include="Dems\img\services-banner.jpg" />
+    <Content Include="Dems\index.aspx" />
+    <Content Include="Dems\js\bootstrap.min.js" />
+    <Content Include="Dems\js\rev-slider\rs-plugin\jquery.themepunch.plugins.min.js" />
+    <Content Include="Dems\js\rev-slider\rs-plugin\jquery.themepunch.revolution.js" />
+    <Content Include="Dems\js\rev-slider\rs.home.js" />
+    <Content Include="Dems\js\vendor\jquery-1.11.2.min.js" />
+    <Content Include="Dems\news.aspx" />
+    <Content Include="ExaminationModules\AddExamInfo.aspx" />
+    <Content Include="ExaminationModules\AddExamType.aspx" />
+    <Content Include="ExaminationModules\AddGradeSystem.aspx" />
+    <Content Include="ExaminationModules\AddQuestionPaturn.aspx" />
+    <Content Include="ExaminationModules\AddSubject.aspx" />
+    <Content Include="ExaminationModules\ClassWiseSubjectSetup.aspx" />
+    <Content Include="ExaminationModules\DetailsSubjextPattern.aspx" />
+    <Content Include="ExaminationModules\GenerateMarksheet.aspx" />
+    <Content Include="ExaminationModules\GenerateSubjctQuestionPattern.aspx" />
+    <Content Include="ExaminationModules\HomeExamination.aspx" />
+    <Content Include="ExaminationModules\markentry.aspx" />
+    <Content Include="ExaminationModules\MarksheetViewer.aspx" />
+    <Content Include="ExaminationModules\ReportHome.aspx" />
+    <Content Include="ExaminationModules\StudentSubjectList.aspx" />
+    <Content Include="ExaminationModules\TranferCertificate.aspx" />
+    <Content Include="ExaminationModules\UpdateMarks.aspx" />
+    <Content Include="ExaminationModules\ViewStudentMarksheets.aspx" />
+    <Content Include="FormUserRagistration\EmpRegiForm.aspx" />
+    <Content Include="FormUserRagistration\ProfileDetails.aspx" />
+    <Content Include="FormUserRagistration\viewformemp.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="GuidTeacherManagement\AssignGuidTeacherfrm.aspx" />
+    <Content Include="GuidTeacherManagement\GuidTeacherByStudent.aspx" />
+    <Content Include="GuidTeacherManagement\HomeGuidTeacher.aspx" />
+    <Content Include="GuidTeacherManagement\Viewtdstudentguid.aspx" />
+    <Content Include="HumanResorceView\employeediv.aspx" />
+    <Content Include="HumanResorceView\HomeReportStaff.aspx" />
+    <Content Include="HumanResorceView\HumanResorcehome.aspx" />
+    <Content Include="HumanResorceView\HumanResourceModule\PayrollHome.aspx" />
+    <Content Include="HumanResorceView\Payrollresource.aspx" />
+    <Content Include="HumanResorceView\SalaryAllowance.aspx" />
+    <Content Include="HumanResorceView\SalarysetDetails.aspx" />
+    <Content Include="HumanResorceView\Searchsalary.aspx" />
+    <Content Include="HumanResorceView\StaffEmpdetails.aspx" />
+    <Content Include="ImageIcones\Admin-icon.png" />
+    <Content Include="ImageIcones\Admin.ico" />
+    <Content Include="ImageIcones\AdminHeaderImage.jpg" />
+    <Content Include="ImageIcones\Backward-icon.png" />
+    <Content Include="ImageIcones\banners.png" />
+    <Content Include="ImageIcones\Dems-logo.gif" />
+    <Content Include="ImageIcones\dems.ico" />
+    <Content Include="ImageIcones\DEMS1.jpg" />
+    <Content Include="ImageIcones\he.jpg" />
+    <Content Include="ImageIcones\images.png" />
+    <Content Include="ImageIcones\Logoff.png" />
+    <Content Include="ImageIcones\newloggoff.png" />
+    <Content Include="ImageIcones\personal-7.jpg" />
+    <Content Include="ImageIcones\picstudent.png" />
+    <Content Include="ImageIcones\Sstudents.ico" />
+    <Content Include="ImageIcones\studentheader.jpg" />
+    <Content Include="ImageIcones\Teacherhead.jpg" />
+    <Content Include="ImageIcones\Teachers-icon.png" />
+    <Content Include="ImageIcones\Teachers.ico" />
+    <Content Include="ImageIcones\TeachersImages.jpg" />
+    <Content Include="Notifications\ChangeAPIEmail.aspx" />
+    <Content Include="Notifications\Notificationform.aspx" />
+    <Content Include="OldStudentHome.aspx" />
+    <Content Include="OriginalAttandenceSystem\Attandancedetails.aspx" />
+    <Content Include="OriginalAttandenceSystem\AttandanceHome.aspx" />
+    <Content Include="OriginalAttandenceSystem\AttandanceReportDiv.aspx" />
+    <Content Include="OriginalAttandenceSystem\AttandanceReportHome.aspx" />
+    <Content Include="OriginalAttandenceSystem\AttandanceSheet.aspx" />
+    <Content Include="OriginalAttandenceSystem\AttandanceSheetDiv.aspx" />
+    <Content Include="OriginalAttandenceSystem\DetailsAbsentEmp.aspx" />
+    <Content Include="OriginalAttandenceSystem\HomeStaffAttandance.aspx" />
+    <Content Include="OriginalAttandenceSystem\StaffAndFacultyAttandance.aspx" />
+    <Content Include="OriginalAttandenceSystem\StaffAttandanceReportDiv.aspx" />
+    <Content Include="OriginalAttandenceSystem\StaffCurrentAttandanceStatus.aspx" />
+    <Content Include="OriginalAttandenceSystem\StudenceIndividualAttandanceImport.aspx" />
+    <Content Include="OriginalAttandenceSystem\StudentAttandancedetails.aspx" />
+    <Content Include="OriginalAttandenceSystem\StudentsCurrentAttandanceStatus.aspx" />
+    <Content Include="OriginalAttandenceSystem\ViewStudentAttandance.aspx" />
+    <Content Include="RoutinModule\GenerateClassRoutin.aspx" />
+    <Content Include="RoutinModule\HomeRoutineAccademic.aspx" />
+    <Content Include="RoutinModule\HomeRoutinReport.aspx" />
+    <Content Include="RoutinModule\HomeSchduleReport.aspx" />
+    <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Sidebarcssjs\css\reset.css" />
+    <Content Include="Sidebarcssjs\css\style.css" />
+    <Content Include="Sidebarcssjs\img\cd-avatar.png" />
+    <Content Include="Sidebarcssjs\js\jquery-2.1.4.js" />
+    <Content Include="Sidebarcssjs\js\jquery.menu-aim.js" />
+    <Content Include="Sidebarcssjs\js\main.js" />
+    <Content Include="Sidebarcssjs\js\modernizr.js" />
+    <Content Include="SidebarDemo.aspx" />
+    <Content Include="Sidebarnavigator.aspx" />
+    <Content Include="StudentDasboard.aspx" />
+    <Content Include="StudentDesboard\StudentProfileform.aspx" />
+    <Content Include="StudentDesboard\style.css" />
+    <Content Include="studentdetails.aspx" />
+    <Content Include="StudentHome.aspx" />
+    <Content Include="StudentNewBatch.aspx" />
+    <Content Include="studentPermotion.aspx" />
+    <Content Include="TeacherDasboard.aspx" />
+    <Content Include="TeacherDesboard\css\bootstrap.min.css" />
+    <Content Include="TeacherDesboard\css\style.css" />
+    <Content Include="TeacherDesboard\EmpDetailsReport.aspx" />
+    <Content Include="TeacherDesboard\js\bootstrap.js" />
+    <Content Include="TeacherDesboard\js\bootstrap.min.js" />
+    <Content Include="TeacherDesboard\js\npm.js" />
+    <Content Include="TeacherDesboard\TdStaffAttandancedetails.aspx" />
+    <Content Include="TeacherDesboard\TdStudentProfileDetails.aspx" />
+    <Content Include="TeacherDesboard\TeacherProfile.aspx" />
+    <Content Include="usercontrolpage\empstaffcontrol.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebsiteControl\WebsiteMaintanance.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccademicManagement\AcadimicModulBL\AcademicBL.cs" />
+    <Compile Include="AccademicManagement\AdmissionDetails1.aspx.cs">
+      <DependentUpon>AdmissionDetails1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccademicManagement\AdmissionDetails1.aspx.designer.cs">
+      <DependentUpon>AdmissionDetails1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccademicManagement\AdmissionForm.aspx.cs">
+      <DependentUpon>AdmissionForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccademicManagement\AdmissionForm.aspx.designer.cs">
+      <DependentUpon>AdmissionForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccademicManagement\AdmissionUpdateForm.aspx.cs">
+      <DependentUpon>AdmissionUpdateForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccademicManagement\AdmissionUpdateForm.aspx.designer.cs">
+      <DependentUpon>AdmissionUpdateForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccademicManagement\AllowStudentSit.aspx.cs">
+      <DependentUpon>AllowStudentSit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccademicManagement\AllowStudentSit.aspx.designer.cs">
+      <DependentUpon>AllowStudentSit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccademicManagement\BatchAsign.aspx.cs">
+      <DependentUpon>BatchAsign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccademicManagement\BatchAsign.aspx.designer.cs">
+      <DependentUpon>BatchAsign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccademicManagement\HomeStudentAccademic.aspx.cs">
+      <DependentUpon>HomeStudentAccademic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccademicManagement\HomeStudentAccademic.aspx.designer.cs">
+      <DependentUpon>HomeStudentAccademic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccademicManagement\HomeStudentInfoReport.aspx.cs">
+      <DependentUpon>HomeStudentInfoReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccademicManagement\HomeStudentInfoReport.aspx.designer.cs">
+      <DependentUpon>HomeStudentInfoReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccademicManagement\PermotedStudentList.aspx.cs">
+      <DependentUpon>PermotedStudentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccademicManagement\PermotedStudentList.aspx.designer.cs">
+      <DependentUpon>PermotedStudentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccademicManagement\StudentPermotion.aspx.cs">
+      <DependentUpon>StudentPermotion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccademicManagement\StudentPermotion.aspx.designer.cs">
+      <DependentUpon>StudentPermotion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccademicManagement\StudentProfilePage.aspx.cs">
+      <DependentUpon>StudentProfilePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccademicManagement\StudentProfilePage.aspx.designer.cs">
+      <DependentUpon>StudentProfilePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccademicManagement\StudentReport.aspx.cs">
+      <DependentUpon>StudentReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccademicManagement\StudentReport.aspx.designer.cs">
+      <DependentUpon>StudentReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminControlPanel\AddSuperAdmin.aspx.cs">
+      <DependentUpon>AddSuperAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminControlPanel\AddSuperAdmin.aspx.designer.cs">
+      <DependentUpon>AddSuperAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminControlPanel\AdminHomeTable.aspx.cs">
+      <DependentUpon>AdminHomeTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminControlPanel\AdminHomeTable.aspx.designer.cs">
+      <DependentUpon>AdminHomeTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminControlPanel\AdminProfile.aspx.cs">
+      <DependentUpon>AdminProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminControlPanel\AdminProfile.aspx.designer.cs">
+      <DependentUpon>AdminProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFinanance\AdminFinanaceManagement.aspx.cs">
+      <DependentUpon>AdminFinanaceManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminFinanance\AdminFinanaceManagement.aspx.designer.cs">
+      <DependentUpon>AdminFinanaceManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFinanance\HomeFineManagement.aspx.cs">
+      <DependentUpon>HomeFineManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminFinanance\HomeFineManagement.aspx.designer.cs">
+      <DependentUpon>HomeFineManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFinanance\HomeFineReport.aspx.cs">
+      <DependentUpon>HomeFineReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminFinanance\HomeFineReport.aspx.designer.cs">
+      <DependentUpon>HomeFineReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFinance.aspx.cs">
+      <DependentUpon>AdminFinance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminFinance.aspx.designer.cs">
+      <DependentUpon>AdminFinance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adminforget.aspx.cs">
+      <DependentUpon>Adminforget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adminforget.aspx.designer.cs">
+      <DependentUpon>Adminforget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogIn.aspx.cs">
+      <DependentUpon>AdminLogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogIn.aspx.designer.cs">
+      <DependentUpon>AdminLogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMasterPage\AdminMasterPage.Master.cs">
+      <DependentUpon>AdminMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMasterPage\AdminMasterPage.Master.designer.cs">
+      <DependentUpon>AdminMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminProfile.aspx.cs">
+      <DependentUpon>AdminProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminProfile.aspx.designer.cs">
+      <DependentUpon>AdminProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettingModule\AddBatchYr.cs" />
+    <Compile Include="AdminSettingModule\AddBoardBL.cs" />
+    <Compile Include="AdminSettingModule\AddclassBL.cs" />
+    <Compile Include="AdminSettingModule\AddclassGroupListBL.cs" />
+    <Compile Include="AdminSettingModule\AddclassSectionBL.cs" />
+    <Compile Include="AdminSettingModule\AddGroupBL.cs" />
+    <Compile Include="AdminSettingModule\AddSectionBL.cs" />
+    <Compile Include="AdminSettingModule\AddSessionBL.cs" />
+    <Compile Include="AdminSettingModule\CollegeInfofrmBL.cs" />
+    <Compile Include="AdminSettingModule\filterDataBL.cs" />
+    <Compile Include="AdminSettingView\AcademicSetting.aspx.cs">
+      <DependentUpon>AcademicSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSettingView\AcademicSetting.aspx.designer.cs">
+      <DependentUpon>AcademicSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettingView\AddBatchlistfrm.aspx.cs">
+      <DependentUpon>AddBatchlistfrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSettingView\AddBatchlistfrm.aspx.designer.cs">
+      <DependentUpon>AddBatchlistfrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettingView\AddBloodReligionDeprtfrm.aspx.cs">
+      <DependentUpon>AddBloodReligionDeprtfrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSettingView\AddBloodReligionDeprtfrm.aspx.designer.cs">
+      <DependentUpon>AddBloodReligionDeprtfrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettingView\AddBoard.aspx.cs">
+      <DependentUpon>AddBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSettingView\AddBoard.aspx.designer.cs">
+      <DependentUpon>AddBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettingView\AddClass.aspx.cs">
+      <DependentUpon>AddClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSettingView\AddClass.aspx.designer.cs">
+      <DependentUpon>AddClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettingView\AddClassGroupList.aspx.cs">
+      <DependentUpon>AddClassGroupList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSettingView\AddClassGroupList.aspx.designer.cs">
+      <DependentUpon>AddClassGroupList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettingView\AddClassSectionList.aspx.cs">
+      <DependentUpon>AddClassSectionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSettingView\AddClassSectionList.aspx.designer.cs">
+      <DependentUpon>AddClassSectionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettingView\AddGroupfrm.aspx.cs">
+      <DependentUpon>AddGroupfrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSettingView\AddGroupfrm.aspx.designer.cs">
+      <DependentUpon>AddGroupfrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettingView\AddManagementShift.aspx.cs">
+      <DependentUpon>AddManagementShift.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSettingView\AddManagementShift.aspx.designer.cs">
+      <DependentUpon>AddManagementShift.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettingView\AddSchoolCollegeSetupfrm.aspx.cs">
+      <DependentUpon>AddSchoolCollegeSetupfrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSettingView\AddSchoolCollegeSetupfrm.aspx.designer.cs">
+      <DependentUpon>AddSchoolCollegeSetupfrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettingView\AddSectionForm.aspx.cs">
+      <DependentUpon>AddSectionForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSettingView\AddSectionForm.aspx.designer.cs">
+      <DependentUpon>AddSectionForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettingView\DistrictStateManagementfrm.aspx.cs">
+      <DependentUpon>DistrictStateManagementfrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSettingView\DistrictStateManagementfrm.aspx.designer.cs">
+      <DependentUpon>DistrictStateManagementfrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettingView\GeneralSetting.aspx.cs">
+      <DependentUpon>GeneralSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSettingView\GeneralSetting.aspx.designer.cs">
+      <DependentUpon>GeneralSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettingView\SessionAdd.aspx.cs">
+      <DependentUpon>SessionAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSettingView\SessionAdd.aspx.designer.cs">
+      <DependentUpon>SessionAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettingView\SettingHome.aspx.cs">
+      <DependentUpon>SettingHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSettingView\SettingHome.aspx.designer.cs">
+      <DependentUpon>SettingHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTable.aspx.cs">
+      <DependentUpon>AdminTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminTable.aspx.designer.cs">
+      <DependentUpon>AdminTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdmissionForm.aspx.cs">
+      <DependentUpon>AdmissionForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdmissionForm.aspx.designer.cs">
+      <DependentUpon>AdmissionForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\AddmissionFeeCategory.aspx.cs">
+      <DependentUpon>AddmissionFeeCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\AddmissionFeeCategory.aspx.designer.cs">
+      <DependentUpon>AddmissionFeeCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\AddmissionFeeCollection.aspx.cs">
+      <DependentUpon>AddmissionFeeCollection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\AddmissionFeeCollection.aspx.designer.cs">
+      <DependentUpon>AddmissionFeeCollection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\AddmissnFeeParti.aspx.cs">
+      <DependentUpon>AddmissnFeeParti.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\AddmissnFeeParti.aspx.designer.cs">
+      <DependentUpon>AddmissnFeeParti.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\CollectionDetails.aspx.cs">
+      <DependentUpon>CollectionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\CollectionDetails.aspx.designer.cs">
+      <DependentUpon>CollectionDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\Discount.aspx.cs">
+      <DependentUpon>Discount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\Discount.aspx.designer.cs">
+      <DependentUpon>Discount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\FeeCollecDetails.aspx.cs">
+      <DependentUpon>FeeCollecDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\FeeCollecDetails.aspx.designer.cs">
+      <DependentUpon>FeeCollecDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\FeeCollection.aspx.cs">
+      <DependentUpon>FeeCollection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\FeeCollection.aspx.designer.cs">
+      <DependentUpon>FeeCollection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\FeeParticular.aspx.cs">
+      <DependentUpon>FeeParticular.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\FeeParticular.aspx.designer.cs">
+      <DependentUpon>FeeParticular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\FreeCatogry.aspx.cs">
+      <DependentUpon>FreeCatogry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\FreeCatogry.aspx.designer.cs">
+      <DependentUpon>FreeCatogry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\Partyculary.aspx.cs">
+      <DependentUpon>Partyculary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendenceSystem\FeeMgt\Partyculary.aspx.designer.cs">
+      <DependentUpon>Partyculary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendenceSystem\FinanceBL\FinanceModuleBL.cs" />
+    <Compile Include="AttendenceSystem\FinanceReport\DiscountReport.aspx.cs">
+      <DependentUpon>DiscountReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendenceSystem\FinanceReport\DiscountReport.aspx.designer.cs">
+      <DependentUpon>DiscountReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendenceSystem\FinanceReport\FeeCollectionDetails.aspx.cs">
+      <DependentUpon>FeeCollectionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendenceSystem\FinanceReport\FeeCollectionDetails.aspx.designer.cs">
+      <DependentUpon>FeeCollectionDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendenceSystem\FinanceReport\FineReport.aspx.cs">
+      <DependentUpon>FineReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendenceSystem\FinanceReport\FineReport.aspx.designer.cs">
+      <DependentUpon>FineReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendenceSystem\FineMgt\StuFineCollect.aspx.cs">
+      <DependentUpon>StuFineCollect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendenceSystem\FineMgt\StuFineCollect.aspx.designer.cs">
+      <DependentUpon>StuFineCollect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessLogic\LogicBn.cs" />
+    <Compile Include="BussinessLogicClass\AddUser.cs" />
+    <Compile Include="ControlPanelDiv\AddStudentAccount.aspx.cs">
+      <DependentUpon>AddStudentAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPanelDiv\AddStudentAccount.aspx.designer.cs">
+      <DependentUpon>AddStudentAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanelDiv\AdduserAccount.aspx.cs">
+      <DependentUpon>AdduserAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPanelDiv\AdduserAccount.aspx.designer.cs">
+      <DependentUpon>AdduserAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanelDiv\HomeControl.aspx.cs">
+      <DependentUpon>HomeControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPanelDiv\HomeControl.aspx.designer.cs">
+      <DependentUpon>HomeControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanelDiv\StudentAccountList.aspx.cs">
+      <DependentUpon>StudentAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPanelDiv\StudentAccountList.aspx.designer.cs">
+      <DependentUpon>StudentAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanelDiv\StudentOldPassSet.aspx.cs">
+      <DependentUpon>StudentOldPassSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPanelDiv\StudentOldPassSet.aspx.designer.cs">
+      <DependentUpon>StudentOldPassSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanelDiv\UserAccountList.aspx.cs">
+      <DependentUpon>UserAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPanelDiv\UserAccountList.aspx.designer.cs">
+      <DependentUpon>UserAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanelDiv\UserOldPassSet.aspx.cs">
+      <DependentUpon>UserOldPassSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPanelDiv\UserOldPassSet.aspx.designer.cs">
+      <DependentUpon>UserOldPassSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentStudentInfo.aspx.cs">
+      <DependentUpon>CurrentStudentInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CurrentStudentInfo.aspx.designer.cs">
+      <DependentUpon>CurrentStudentInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="demoModel.aspx.cs">
+      <DependentUpon>demoModel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="demoModel.aspx.designer.cs">
+      <DependentUpon>demoModel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="demousercontrol.aspx.cs">
+      <DependentUpon>demousercontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="demousercontrol.aspx.designer.cs">
+      <DependentUpon>demousercontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dems\about-us.aspx.cs">
+      <DependentUpon>about-us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dems\about-us.aspx.designer.cs">
+      <DependentUpon>about-us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dems\event.aspx.cs">
+      <DependentUpon>event.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dems\event.aspx.designer.cs">
+      <DependentUpon>event.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dems\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dems\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dems\news.aspx.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dems\news.aspx.designer.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationModules\AddExamInfo.aspx.cs">
+      <DependentUpon>AddExamInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationModules\AddExamInfo.aspx.designer.cs">
+      <DependentUpon>AddExamInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationModules\AddExamType.aspx.cs">
+      <DependentUpon>AddExamType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationModules\AddExamType.aspx.designer.cs">
+      <DependentUpon>AddExamType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationModules\AddGradeSystem.aspx.cs">
+      <DependentUpon>AddGradeSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationModules\AddGradeSystem.aspx.designer.cs">
+      <DependentUpon>AddGradeSystem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationModules\AddQuestionPaturn.aspx.cs">
+      <DependentUpon>AddQuestionPaturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationModules\AddQuestionPaturn.aspx.designer.cs">
+      <DependentUpon>AddQuestionPaturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationModules\AddSubject.aspx.cs">
+      <DependentUpon>AddSubject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationModules\AddSubject.aspx.designer.cs">
+      <DependentUpon>AddSubject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationModules\ClassWiseSubjectSetup.aspx.cs">
+      <DependentUpon>ClassWiseSubjectSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationModules\ClassWiseSubjectSetup.aspx.designer.cs">
+      <DependentUpon>ClassWiseSubjectSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationModules\DetailsSubjextPattern.aspx.cs">
+      <DependentUpon>DetailsSubjextPattern.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationModules\DetailsSubjextPattern.aspx.designer.cs">
+      <DependentUpon>DetailsSubjextPattern.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationModules\ExaminationBL.cs" />
+    <Compile Include="ExaminationModules\GenerateMarksheet.aspx.cs">
+      <DependentUpon>GenerateMarksheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationModules\GenerateMarksheet.aspx.designer.cs">
+      <DependentUpon>GenerateMarksheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationModules\GenerateSubjctQuestionPattern.aspx.cs">
+      <DependentUpon>GenerateSubjctQuestionPattern.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationModules\GenerateSubjctQuestionPattern.aspx.designer.cs">
+      <DependentUpon>GenerateSubjctQuestionPattern.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationModules\HomeExamination.aspx.cs">
+      <DependentUpon>HomeExamination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationModules\HomeExamination.aspx.designer.cs">
+      <DependentUpon>HomeExamination.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationModules\markentry.aspx.cs">
+      <DependentUpon>markentry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationModules\markentry.aspx.designer.cs">
+      <DependentUpon>markentry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationModules\MarksheetViewer.aspx.cs">
+      <DependentUpon>MarksheetViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationModules\MarksheetViewer.aspx.designer.cs">
+      <DependentUpon>MarksheetViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationModules\ReportHome.aspx.cs">
+      <DependentUpon>ReportHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationModules\ReportHome.aspx.designer.cs">
+      <DependentUpon>ReportHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationModules\StudentSubjectList.aspx.cs">
+      <DependentUpon>StudentSubjectList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationModules\StudentSubjectList.aspx.designer.cs">
+      <DependentUpon>StudentSubjectList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationModules\TranferCertificate.aspx.cs">
+      <DependentUpon>TranferCertificate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationModules\TranferCertificate.aspx.designer.cs">
+      <DependentUpon>TranferCertificate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationModules\UpdateMarks.aspx.cs">
+      <DependentUpon>UpdateMarks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationModules\UpdateMarks.aspx.designer.cs">
+      <DependentUpon>UpdateMarks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminationModules\ViewStudentMarksheets.aspx.cs">
+      <DependentUpon>ViewStudentMarksheets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationModules\ViewStudentMarksheets.aspx.designer.cs">
+      <DependentUpon>ViewStudentMarksheets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserRagistration\EmpRegiForm.aspx.cs">
+      <DependentUpon>EmpRegiForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormUserRagistration\EmpRegiForm.aspx.designer.cs">
+      <DependentUpon>EmpRegiForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserRagistration\ProfileDetails.aspx.cs">
+      <DependentUpon>ProfileDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormUserRagistration\ProfileDetails.aspx.designer.cs">
+      <DependentUpon>ProfileDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserRagistration\viewformemp.aspx.cs">
+      <DependentUpon>viewformemp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormUserRagistration\viewformemp.aspx.designer.cs">
+      <DependentUpon>viewformemp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserRegistrationModule\EmployeeregBL.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GuidTeacherManagement\AssignGuidTeacherfrm.aspx.cs">
+      <DependentUpon>AssignGuidTeacherfrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GuidTeacherManagement\AssignGuidTeacherfrm.aspx.designer.cs">
+      <DependentUpon>AssignGuidTeacherfrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GuidTeacherManagement\GuidTeacherByStudent.aspx.cs">
+      <DependentUpon>GuidTeacherByStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GuidTeacherManagement\GuidTeacherByStudent.aspx.designer.cs">
+      <DependentUpon>GuidTeacherByStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GuidTeacherManagement\HomeGuidTeacher.aspx.cs">
+      <DependentUpon>HomeGuidTeacher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GuidTeacherManagement\HomeGuidTeacher.aspx.designer.cs">
+      <DependentUpon>HomeGuidTeacher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GuidTeacherManagement\Viewtdstudentguid.aspx.cs">
+      <DependentUpon>Viewtdstudentguid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GuidTeacherManagement\Viewtdstudentguid.aspx.designer.cs">
+      <DependentUpon>Viewtdstudentguid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResorceView\employeediv.aspx.cs">
+      <DependentUpon>employeediv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HumanResorceView\employeediv.aspx.designer.cs">
+      <DependentUpon>employeediv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResorceView\HomeReportStaff.aspx.cs">
+      <DependentUpon>HomeReportStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HumanResorceView\HomeReportStaff.aspx.designer.cs">
+      <DependentUpon>HomeReportStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResorceView\HumanResorcehome.aspx.cs">
+      <DependentUpon>HumanResorcehome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HumanResorceView\HumanResorcehome.aspx.designer.cs">
+      <DependentUpon>HumanResorcehome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResorceView\HumanResourceModule\PayrollHome.aspx.cs">
+      <DependentUpon>PayrollHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HumanResorceView\HumanResourceModule\PayrollHome.aspx.designer.cs">
+      <DependentUpon>PayrollHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResorceView\Payrollresource.aspx.cs">
+      <DependentUpon>Payrollresource.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HumanResorceView\Payrollresource.aspx.designer.cs">
+      <DependentUpon>Payrollresource.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResorceView\SalaryAllowance.aspx.cs">
+      <DependentUpon>SalaryAllowance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HumanResorceView\SalaryAllowance.aspx.designer.cs">
+      <DependentUpon>SalaryAllowance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResorceView\SalarysetDetails.aspx.cs">
+      <DependentUpon>SalarysetDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HumanResorceView\SalarysetDetails.aspx.designer.cs">
+      <DependentUpon>SalarysetDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResorceView\Searchsalary.aspx.cs">
+      <DependentUpon>Searchsalary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HumanResorceView\Searchsalary.aspx.designer.cs">
+      <DependentUpon>Searchsalary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResorceView\StaffEmpdetails.aspx.cs">
+      <DependentUpon>StaffEmpdetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HumanResorceView\StaffEmpdetails.aspx.designer.cs">
+      <DependentUpon>StaffEmpdetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\ChangeAPIEmail.aspx.cs">
+      <DependentUpon>ChangeAPIEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notifications\ChangeAPIEmail.aspx.designer.cs">
+      <DependentUpon>ChangeAPIEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\NotificationBL.cs" />
+    <Compile Include="Notifications\Notificationform.aspx.cs">
+      <DependentUpon>Notificationform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notifications\Notificationform.aspx.designer.cs">
+      <DependentUpon>Notificationform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OldStudentHome.aspx.cs">
+      <DependentUpon>OldStudentHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OldStudentHome.aspx.designer.cs">
+      <DependentUpon>OldStudentHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\Attandancedetails.aspx.cs">
+      <DependentUpon>Attandancedetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\Attandancedetails.aspx.designer.cs">
+      <DependentUpon>Attandancedetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\AttandanceHome.aspx.cs">
+      <DependentUpon>AttandanceHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\AttandanceHome.aspx.designer.cs">
+      <DependentUpon>AttandanceHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\AttandanceReportDiv.aspx.cs">
+      <DependentUpon>AttandanceReportDiv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\AttandanceReportDiv.aspx.designer.cs">
+      <DependentUpon>AttandanceReportDiv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\AttandanceReportHome.aspx.cs">
+      <DependentUpon>AttandanceReportHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\AttandanceReportHome.aspx.designer.cs">
+      <DependentUpon>AttandanceReportHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\AttandanceSheet.aspx.cs">
+      <DependentUpon>AttandanceSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\AttandanceSheet.aspx.designer.cs">
+      <DependentUpon>AttandanceSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\AttandanceSheetDiv.aspx.cs">
+      <DependentUpon>AttandanceSheetDiv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\AttandanceSheetDiv.aspx.designer.cs">
+      <DependentUpon>AttandanceSheetDiv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\DetailsAbsentEmp.aspx.cs">
+      <DependentUpon>DetailsAbsentEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\DetailsAbsentEmp.aspx.designer.cs">
+      <DependentUpon>DetailsAbsentEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\HomeStaffAttandance.aspx.cs">
+      <DependentUpon>HomeStaffAttandance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\HomeStaffAttandance.aspx.designer.cs">
+      <DependentUpon>HomeStaffAttandance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\StaffAndFacultyAttandance.aspx.cs">
+      <DependentUpon>StaffAndFacultyAttandance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\StaffAndFacultyAttandance.aspx.designer.cs">
+      <DependentUpon>StaffAndFacultyAttandance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\StaffAttandanceReportDiv.aspx.cs">
+      <DependentUpon>StaffAttandanceReportDiv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\StaffAttandanceReportDiv.aspx.designer.cs">
+      <DependentUpon>StaffAttandanceReportDiv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\StaffCurrentAttandanceStatus.aspx.cs">
+      <DependentUpon>StaffCurrentAttandanceStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\StaffCurrentAttandanceStatus.aspx.designer.cs">
+      <DependentUpon>StaffCurrentAttandanceStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\StudenceIndividualAttandanceImport.aspx.cs">
+      <DependentUpon>StudenceIndividualAttandanceImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\StudenceIndividualAttandanceImport.aspx.designer.cs">
+      <DependentUpon>StudenceIndividualAttandanceImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\StudentAttandancedetails.aspx.cs">
+      <DependentUpon>StudentAttandancedetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\StudentAttandancedetails.aspx.designer.cs">
+      <DependentUpon>StudentAttandancedetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\StudentsCurrentAttandanceStatus.aspx.cs">
+      <DependentUpon>StudentsCurrentAttandanceStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\StudentsCurrentAttandanceStatus.aspx.designer.cs">
+      <DependentUpon>StudentsCurrentAttandanceStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\ViewStudentAttandance.aspx.cs">
+      <DependentUpon>ViewStudentAttandance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OriginalAttandenceSystem\ViewStudentAttandance.aspx.designer.cs">
+      <DependentUpon>ViewStudentAttandance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoutinModule\GenerateClassRoutin.aspx.cs">
+      <DependentUpon>GenerateClassRoutin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoutinModule\GenerateClassRoutin.aspx.designer.cs">
+      <DependentUpon>GenerateClassRoutin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RoutinModule\HomeRoutineAccademic.aspx.cs">
+      <DependentUpon>HomeRoutineAccademic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoutinModule\HomeRoutineAccademic.aspx.designer.cs">
+      <DependentUpon>HomeRoutineAccademic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RoutinModule\HomeRoutinReport.aspx.cs">
+      <DependentUpon>HomeRoutinReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoutinModule\HomeRoutinReport.aspx.designer.cs">
+      <DependentUpon>HomeRoutinReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RoutinModule\HomeSchduleReport.aspx.cs">
+      <DependentUpon>HomeSchduleReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoutinModule\HomeSchduleReport.aspx.designer.cs">
+      <DependentUpon>HomeSchduleReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SidebarDemo.aspx.cs">
+      <DependentUpon>SidebarDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SidebarDemo.aspx.designer.cs">
+      <DependentUpon>SidebarDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sidebarnavigator.aspx.cs">
+      <DependentUpon>Sidebarnavigator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sidebarnavigator.aspx.designer.cs">
+      <DependentUpon>Sidebarnavigator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDasboard.aspx.cs">
+      <DependentUpon>StudentDasboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentDasboard.aspx.designer.cs">
+      <DependentUpon>StudentDasboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDesboard\StudentMasterPage.Master.cs">
+      <DependentUpon>StudentMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentDesboard\StudentMasterPage.Master.designer.cs">
+      <DependentUpon>StudentMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDesboard\StudentProfileform.aspx.cs">
+      <DependentUpon>StudentProfileform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentDesboard\StudentProfileform.aspx.designer.cs">
+      <DependentUpon>StudentProfileform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="studentdetails.aspx.cs">
+      <DependentUpon>studentdetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="studentdetails.aspx.designer.cs">
+      <DependentUpon>studentdetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentHome.aspx.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentHome.aspx.designer.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BussinessLogicClass\StudentInfoBL.cs" />
+    <Compile Include="StudentNewBatch.aspx.cs">
+      <DependentUpon>StudentNewBatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentNewBatch.aspx.designer.cs">
+      <DependentUpon>StudentNewBatch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="studentPermotion.aspx.cs">
+      <DependentUpon>studentPermotion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="studentPermotion.aspx.designer.cs">
+      <DependentUpon>studentPermotion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherDasboard.aspx.cs">
+      <DependentUpon>TeacherDasboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherDasboard.aspx.designer.cs">
+      <DependentUpon>TeacherDasboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherDesboard\EmpDetailsReport.aspx.cs">
+      <DependentUpon>EmpDetailsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherDesboard\EmpDetailsReport.aspx.designer.cs">
+      <DependentUpon>EmpDetailsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherDesboard\TdStaffAttandancedetails.aspx.cs">
+      <DependentUpon>TdStaffAttandancedetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherDesboard\TdStaffAttandancedetails.aspx.designer.cs">
+      <DependentUpon>TdStaffAttandancedetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherDesboard\TdStudentProfileDetails.aspx.cs">
+      <DependentUpon>TdStudentProfileDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherDesboard\TdStudentProfileDetails.aspx.designer.cs">
+      <DependentUpon>TdStudentProfileDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherDesboard\TeacherMasterpage.Master.cs">
+      <DependentUpon>TeacherMasterpage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherDesboard\TeacherMasterpage.Master.designer.cs">
+      <DependentUpon>TeacherMasterpage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherDesboard\TeacherProfile.aspx.cs">
+      <DependentUpon>TeacherProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherDesboard\TeacherProfile.aspx.designer.cs">
+      <DependentUpon>TeacherProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrolpage\ControlMasterPage.Master.cs">
+      <DependentUpon>ControlMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usercontrolpage\ControlMasterPage.Master.designer.cs">
+      <DependentUpon>ControlMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrolpage\empstaffcontrol.ascx.cs">
+      <DependentUpon>empstaffcontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usercontrolpage\empstaffcontrol.ascx.designer.cs">
+      <DependentUpon>empstaffcontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebsiteControl\WebsiteMaintanance.aspx.cs">
+      <DependentUpon>WebsiteMaintanance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebsiteControl\WebsiteMaintanance.aspx.designer.cs">
+      <DependentUpon>WebsiteMaintanance.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Imgempstaff\" />
+    <Folder Include="Marksheet\" />
+    <Folder Include="ProfileImage\" />
+    <Folder Include="StudentImage\" />
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="angularjs.1.6.1\angularjs.1.6.1.nupkg" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-animate.min.js.map" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-aria.min.js.map" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-cookies.min.js.map" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-loader.min.js.map" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-message-format.min.js.map" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-messages.min.js.map" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-parse-ext.min.js.map" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-resource.min.js.map" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-route.min.js.map" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-sanitize.min.js.map" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular-touch.min.js.map" />
+    <Content Include="angularjs.1.6.1\content\Scripts\angular.min.js.map" />
+    <Content Include="angularjs.1.6.1\content\Scripts\errors.json" />
+    <Content Include="angularjs.1.6.1\content\Scripts\i18n\ngLocale\_._" />
+    <Content Include="angularjs.1.6.1\content\Scripts\version.json" />
+    <Content Include="bootstrap.3.3.7\bootstrap.3.3.7.nupkg" />
+    <Content Include="bootstrap.3.3.7\content\Content\bootstrap-theme.css.map" />
+    <Content Include="bootstrap.3.3.7\content\Content\bootstrap-theme.min.css.map" />
+    <Content Include="bootstrap.3.3.7\content\Content\bootstrap.css.map" />
+    <Content Include="bootstrap.3.3.7\content\Content\bootstrap.min.css.map" />
+    <Content Include="bootstrap.3.3.7\content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap.3.3.7\content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap.3.3.7\content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap.3.3.7\content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bootstrap.3.3.7\content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Site1.Master" />
+    <Content Include="bootstrap.3.3.7\bootstrap-timepicker\bootstaptimer\bower.json" />
+    <Content Include="bootstrap.3.3.7\bootstrap-timepicker\bootstaptimer\CHANGELOG.md" />
+    <Content Include="bootstrap.3.3.7\bootstrap-timepicker\bootstaptimer\composer.json" />
+    <Content Include="bootstrap.3.3.7\bootstrap-timepicker\bootstaptimer\css\timepicker.less" />
+    <Content Include="bootstrap.3.3.7\bootstrap-timepicker\bootstaptimer\package.json" />
+    <Content Include="bootstrap.3.3.7\bootstrap-timepicker\bootstaptimer\README.md" />
+    <Content Include="bootstrap.3.3.7\jquery-timepicker-1.3.5\AUTHORS" />
+    <Content Include="bootstrap.3.3.7\jquery-timepicker-1.3.5\CHANGELOG" />
+    <Content Include="bootstrap.3.3.7\jquery-timepicker-1.3.5\LICENSE-GPL" />
+    <Content Include="bootstrap.3.3.7\jquery-timepicker-1.3.5\LICENSE-MIT" />
+    <Content Include="bootstrap.3.3.7\jquery-timepicker-1.3.5\README.md" />
+    <Content Include="usercontrolpage\ControlMasterPage.Master" />
+    <Content Include="bootstrap.3.3.7\pdfjs\README.md" />
+    <Content Include="bootstrap.3.3.7\pdfjs\tableExport.jquery.json" />
+    <Content Include="Sidebarcssjs\img\cd-arrow.svg" />
+    <Content Include="Sidebarcssjs\img\cd-logo.svg" />
+    <Content Include="Sidebarcssjs\img\cd-nav-icons.svg" />
+    <Content Include="Sidebarcssjs\img\cd-search.svg" />
+    <Content Include="Sidebarcssjs\js\.DS_Store" />
+    <Content Include="Sidebarcssjs\js\README-menu-aim.md" />
+    <Content Include="StudentDesboard\StudentMasterPage.Master" />
+    <Content Include="TeacherDesboard\TeacherMasterpage.Master" />
+    <Content Include="AdminMasterPage\AdminMasterPage.Master" />
+    <Content Include="bootstrap.3.3.7\Sidebarcssjs\img\cd-arrow.svg" />
+    <Content Include="bootstrap.3.3.7\Sidebarcssjs\img\cd-logo.svg" />
+    <Content Include="bootstrap.3.3.7\Sidebarcssjs\img\cd-nav-icons.svg" />
+    <Content Include="bootstrap.3.3.7\Sidebarcssjs\img\cd-search.svg" />
+    <Content Include="bootstrap.3.3.7\Sidebarcssjs\js\.DS_Store" />
+    <Content Include="bootstrap.3.3.7\Sidebarcssjs\js\README-menu-aim.md" />
+    <Content Include="bootstrap.3.3.7\DigitalClock\.gitignore" />
+    <Content Include="bootstrap.3.3.7\DigitalClock\alarm.ogg" />
+    <Content Include="bootstrap.3.3.7\DigitalClock\README.md" />
+    <Content Include="Dems\css\assets\Thumbs.db" />
+    <Content Include="Dems\fonts\fontawesome-webfont .eot" />
+    <Content Include="Dems\fonts\fontawesome-webfont .woff" />
+    <Content Include="Dems\fonts\fontawesome-webfont .woff2" />
+    <Content Include="Dems\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Dems\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Dems\fonts\fontawesome-webfonte0a5 .woff" />
+    <Content Include="Dems\fonts\fontawesome-webfonte0a5 .woff2" />
+    <Content Include="Dems\fonts\fontawesome-webfonte0a5.eot" />
+    <Content Include="Dems\fonts\fontawesome-webfonte0a5.svg" />
+    <Content Include="Dems\fonts\fontawesome-webfonte0a5.ttf" />
+    <Content Include="Dems\fonts\glyphicons-halflings-regular .woff" />
+    <Content Include="Dems\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Dems\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Dems\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Dems\fonts\glyphicons-halflings-regulard41d .eot" />
+    <Content Include="Dems\fonts\Roboto-Black.ttf" />
+    <Content Include="Dems\fonts\Roboto-BlackItalic.ttf" />
+    <Content Include="Dems\fonts\Roboto-Bold.ttf" />
+    <Content Include="Dems\fonts\Roboto-BoldItalic.ttf" />
+    <Content Include="Dems\fonts\Roboto-Italic.ttf" />
+    <Content Include="Dems\fonts\Roboto-Light.ttf" />
+    <Content Include="Dems\fonts\Roboto-LightItalic.ttf" />
+    <Content Include="Dems\fonts\Roboto-Medium.ttf" />
+    <Content Include="Dems\fonts\Roboto-MediumItalic.ttf" />
+    <Content Include="Dems\fonts\Roboto-Regular.ttf" />
+    <Content Include="Dems\fonts\Roboto-Thin.ttf" />
+    <Content Include="Dems\fonts\Roboto-ThinItalic.ttf" />
+    <Content Include="Dems\fonts\RobotoCondensed-Bold.ttf" />
+    <Content Include="Dems\fonts\RobotoCondensed-BoldItalic.ttf" />
+    <Content Include="Dems\fonts\RobotoCondensed-Italic.ttf" />
+    <Content Include="Dems\fonts\RobotoCondensed-Light.ttf" />
+    <Content Include="Dems\fonts\RobotoCondensed-LightItalic.ttf" />
+    <Content Include="Dems\fonts\RobotoCondensed-Regular.ttf" />
+    <Content Include="Dems\img\rev-slider\Thumbs.db" />
+    <Content Include="Dems\img\Thumbs.db" />
+    <Content Include="TeacherDesboard\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="TeacherDesboard\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="TeacherDesboard\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="TeacherDesboard\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="TeacherDesboard\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1982/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

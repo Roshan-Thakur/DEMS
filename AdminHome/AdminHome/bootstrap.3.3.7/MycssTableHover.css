@@ -1,0 +1,640 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Ubuntu);      
+        * {margin: 0; padding: 0; }        
+        body {
+            font-family: Ubuntu, arial, verdana;         
+            background-color:gray;
+        }
+.body {
+    background-color: gray;
+    padding: 50px 0px 0px 0px;
+    margin: 0;
+}
+        /*----------
+        Blocks
+        ----------*/
+        /*Pricing table and price blocks*/
+        .pricing_table {
+            line-height: 176%; 
+            font-size: 12px; 
+            margin: 0 auto; 
+            width: 75%; 
+            max-width: 800px; 
+            padding-top: 10px;
+            margin-top: 21px;
+        }        
+        .price_block {
+            text-align: center; 
+            width: 100%; 
+            color: #fff; 
+            float: left; 
+            list-style-type: none; 
+            transition: all 0.25s; 
+            position: relative; 
+            box-sizing: border-box;            
+            margin-bottom: 10px; 
+            border-bottom: 1px solid transparent; 
+        }        
+        /*Price heads*/
+        .pricing_table h3 {
+    text-transform: uppercase;
+    padding: 5px 0;
+    background:white;
+    background-color:brown;
+    margin: -10px 0 1px 0;
+}     
+        /*Price tags*/
+        .price {
+    display: table;
+    background: brown;
+    width: 100%;
+    height: 70px;
+}
+        .price_figure {
+            font-size: 10px; 
+            text-transform: uppercase; 
+            vertical-align: middle; 
+            display: table-cell;
+        }
+        .price_number {
+            font-weight: bold; 
+            display: block;
+        }
+        .price_tenure {
+            font-size: 11px; 
+        }        
+        /*Features*/
+        .features {
+            background: #DEF0F4;           
+            color: #000;
+        }
+        .features li {
+    padding: 9px 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 91%;
+    list-style-type: none;
+}               
+        .action_button {
+            text-decoration: none; 
+            color: #fff; 
+            font-weight: bold; 
+            border-radius: 5px; 
+            background: linear-gradient(#666, #333); 
+            padding: 5px 20px; 
+            font-size: 11px; 
+            text-transform: uppercase;
+        }
+        
+        .price_block:hover {
+            box-shadow: 0 0 0px 5px rgba(0, 0, 0, 0.5); 
+            transform: scale(1.04) translateY(-5px); 
+            z-index: 1; 
+            border-bottom: 0 none;
+        }
+        .price_block:hover .price {
+            background:linear-gradient(#DB7224, #F9B84A); 
+            box-shadow: inset 0 0 45px 1px #DB7224;
+        }
+        .price_block:hover h3 {
+            background: #222;
+        }
+        .price_block:hover .action_button {
+            background: linear-gradient(#F9B84A, #DB7224); 
+        }               
+        @media only screen and (min-width : 480px) and (max-width : 768px) {
+            .price_block {width: 50%;}
+            .price_block:nth-child(odd) {border-right: 1px solid transparent;}
+            .price_block:nth-child(3) {clear: both;}
+            
+            .price_block:nth-child(odd):hover {border: 0 none;}
+        }
+        @media only screen and (min-width : 768px){
+            .price_block {width: 100%;}
+            .price_block {border-right: 10px solid transparent; border-bottom: 0 none;
+                          width:116%;
+            }
+            .price_block:last-child {border-right: 0 none;}
+            
+            .price_block:hover {border: 0 none;}
+        }
+        
+        
+        .skeleton, .skeleton ul, .skeleton li, .skeleton div, .skeleton h3, .skeleton span, .skeleton p {
+            border: 5px solid rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            margin: 7px !important;
+            background: rgba(0, 0, 0, 0.05) !important;
+            padding: 0 !important;
+            text-align: left !important;
+            display: block !important;
+            
+            width: auto !important;
+            height: auto !important;
+            
+            font-size: 10px !important;
+            font-style: italic !important;
+            text-transform: none !important;
+            font-weight: normal !important;
+            color: black !important;
+        }
+        .skeleton .label {
+            font-size: 11px !important;
+            font-style: italic !important;
+            text-transform: none !important;
+            font-weight: normal !important;
+            color: white !important;
+            border: 0 none !important;
+            padding: 5px !important; 
+            margin: 0 !important;
+            float: none !important;
+            text-align: left !important;
+            text-shadow: 0 0 1px white;
+            background: none !important;
+        }
+        .skeleton {
+            display: none !important;
+            margin: 100px !important;
+            clear: both;
+        }
+         body,html{
+		height: 100%;      
+	}
+  /*body {
+    font-family: Ubuntu, arial, verdana;
+    background: black;
+    height:100px;
+    
+}*/  
+
+    /*time in footer*/
+    #txt{
+font-size:30px;
+
+}
+#demo {
+    font-size: 30px;
+    color: white;
+}
+/*school name div*/
+    .school-name {
+    background-color: #ccc;
+    float: right;
+    width: 36%;
+    height: 90%;
+    border-radius: 20px 0px 20px 0px;
+    font-size: 205%;
+    margin-top: -1%;
+    color: #0586AD;
+    font: bold;
+    text-align: center;
+}
+    /*search */
+    input[type=text] {
+    width: 130px;
+    height:40px;
+    margin-left:10px;
+    margin-top:10px;
+    margin-right:10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+/*Rd Button*/
+.btn-info {
+    color: #fff;
+    float: right;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+     margin-top: 335px;
+}
+/*footer*/
+.element.style {
+    background-color: white;
+    width: auto;
+    height: 125px;
+    margin-top: 413px;
+}
+
+.footer {
+    background-color: brown;
+    margin-top: 10%;
+    position: fixed;
+    width: 100%;
+}
+/*popup*/
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 4px 6px;
+    text-decoration: none;
+    /* display: block; */
+    font-size: smaller;
+    background-color: skyblue;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+/*end of popup*/
+ol.v {list-style-type: none;}
+
+
+
+/* chatbox start*/
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    }
+.popup-box {
+    background-color: #ffffff;
+    border: 1px solid #b0b0b0;
+    bottom: 0;
+    display: none;
+    height: 415px;
+    position: fixed;
+    right: 19px;
+    width: 20%;
+    font-family: 'Open Sans', sans-serif;
+}
+/*.round.hollow {
+    margin: 40px 0 0;
+    margin-top: 33%;
+    float: right;
+}*/
+.round.hollow a {
+    border: 2px solid #ff6701;
+    border-radius: 35px;
+    color: red;
+    color: #ff6701;
+    font-size: 19px;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+	display:inline-block;
+}
+h3, .h3 {
+	font-size: 18px;
+}
+/*.round.hollow a:hover {	
+	border-radius: 35px;	
+	font-size: 19px;color:red;
+	text-decoration: none;
+	padding: 5px 5px;
+}*/
+.popup-box-on {
+    width: 19%;    
+    height:10%;
+    font-size: 10px;
+    display: block !important;
+}
+.popup-box .popup-head {
+    background-color: #fff;
+    clear: both;
+    color: #7b7b7b;
+    display: inline-table;
+    font-size: 21px;
+    padding: 7px 10px;
+    width: 100%;
+     font-family: Oswald;
+}
+.bg_none i {
+    border: 1px solid #ff6701;
+    border-radius: 25px;
+    color: #ff6701;
+    font-size: 17px;
+    height: 33px;
+    line-height: 30px;
+    width: 33px;
+}
+.bg_none:hover i {
+    border: 1px solid #000;
+    border-radius: 25px;
+    color: #000;
+    font-size: 17px;
+    height: 33px;
+    line-height: 30px;
+    width: 33px;
+}
+.bg_none {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+}
+.popup-box .popup-head .popup-head-right {
+    margin: 11px 7px 0;
+}
+.popup-box .popup-messages {
+}
+.popup-head-left img {
+    border: 1px solid #7b7b7b;
+    border-radius: 50%;
+    width: 53px;
+    height: 53px;
+}
+.popup-messages-footer > textarea {
+    border-bottom: 1px solid #b2b2b2 !important;
+    height: 34px !important;
+    margin: 7px;
+    padding: 5px !important;
+     border: medium none;
+    width: 95% !important;
+}
+.popup-messages-footer {
+    background: #fff none repeat scroll 0 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+.popup-messages-footer .btn-footer {
+    overflow: hidden;
+    padding: 2px 5px 10px 6px;
+    width: 100%;
+}
+.simple_round {
+    background: #d1d1d1 none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #4b4b4b !important;
+    height: 21px;
+    padding: 0 0 0 1px;
+    width: 21px;
+}
+
+
+
+
+
+.popup-box .popup-messages {
+    background: #3f9684 none repeat scroll 0 0;
+    height: 275px;
+    overflow: auto;
+}
+.direct-chat-messages {
+    overflow: auto;
+    padding: 10px;
+    transform: translate(0px, 0px);
+    
+}
+.popup-messages .chat-box-single-line {
+    border-bottom: 1px solid #a4c6b5;
+    height: 12px;
+    margin: 7px 0 20px;
+    position: relative;
+    text-align: center;
+}
+.popup-messages abbr.timestamp {
+    background: #3f9684 none repeat scroll 0 0;
+    color: #fff;
+    padding: 0 11px;
+}
+
+.popup-head-right .btn-group {
+    display: inline-flex;
+	margin: 0 8px 0 0;
+	vertical-align: top !important;
+}
+.chat-header-button {
+    background: transparent none repeat scroll 0 0;
+    border: 1px solid #636364;
+    border-radius: 50%;
+    font-size: 14px;
+    height: 30px;
+    width: 30px;
+}
+.popup-head-right .btn-group .dropdown-menu {
+    border: medium none;
+    min-width: 122px;
+	padding: 0;
+}
+.popup-head-right .btn-group .dropdown-menu li a {
+    font-size: 12px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.popup-messages abbr.timestamp {
+    background: #3f9684  none repeat scroll 0 0;
+    color: #fff;
+    padding: 0 11px;
+}
+.popup-messages .chat-box-single-line {
+    border-bottom: 1px solid #a4c6b5;
+    height: 12px;
+    margin: 7px 0 20px;
+    position: relative;
+    text-align: center;
+}
+.popup-messages .direct-chat-messages {
+    height: auto;
+}
+.popup-messages .direct-chat-text {
+    background: #dfece7 none repeat scroll 0 0;
+    border: 1px solid #dfece7;
+    border-radius: 2px;
+    color: #1f2121;
+}
+
+.popup-messages .direct-chat-timestamp {
+    color: #fff;
+    opacity: 0.6;
+}
+
+.popup-messages .direct-chat-name {
+	font-size: 15px;
+	font-weight: 600;
+	margin: 0 0 0 49px !important;
+	color: #fff;
+	opacity: 0.9;
+}
+.popup-messages .direct-chat-info {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.popup-messages  .big-round {
+    margin: -9px 0 0 !important;
+}
+.popup-messages  .direct-chat-img {
+    border: 1px solid #fff;
+	background: #3f9684  none repeat scroll 0 0;
+    border-radius: 50%;
+    float: left;
+    height: 40px;
+    margin: -21px 0 0;
+    width: 40px;
+}
+.direct-chat-reply-name {
+    color: #fff;
+    font-size: 15px;
+    margin: 0 0 0 10px;
+    opacity: 0.9;
+}
+
+.direct-chat-img-reply-small
+{
+    border: 1px solid #fff;
+    border-radius: 50%;
+    float: left;
+    height: 20px;
+    margin: 0 8px;
+    width: 20px;
+	background:#3f9684;
+}
+
+.popup-messages .direct-chat-msg {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.popup-messages .doted-border::after {
+	background: transparent none repeat scroll 0 0 !important;
+    border-right: 2px dotted #fff !important;
+	bottom: 0;
+    content: "";
+    left: 17px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 2px;
+	 display: inline;
+	  z-index: -2;
+}
+
+.popup-messages .direct-chat-msg::after {
+    background: #fff none repeat scroll 0 0;
+    border-right: medium none;
+    bottom: 0;
+    content: "";
+    left: 17px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 2px;
+	 display: inline;
+	  z-index: -2;
+}
+.direct-chat-text::after, .direct-chat-text::before {
+   
+    border-color: transparent #dfece7 transparent transparent;
+    
+}
+.direct-chat-text::after, .direct-chat-text::before {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent #d2d6de transparent transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: medium;
+    content: " ";
+    height: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 100%;
+    top: 15px;
+    width: 0;
+}
+.direct-chat-text::after {
+    border-width: 5px;
+    margin-top: -5px;
+}
+.popup-messages .direct-chat-text {
+    background: #dfece7 none repeat scroll 0 0;
+    border: 1px solid #dfece7;
+    border-radius: 2px;
+    color: #1f2121;
+}
+.direct-chat-text {
+    background: #d2d6de none repeat scroll 0 0;
+    border: 1px solid #d2d6de;
+    border-radius: 5px;
+    color: #444;
+    margin: 5px 0 0 50px;
+    padding: 5px 10px;
+    position: relative;
+}
+/*end of chatbox*/
+/*list of popup*/
+.modal.modal-wide .modal-dialog {
+  width: 90%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+/* irrelevant styling */
+body { text-align: center; }
+body p { 
+  max-width: 400px; 
+  margin: 20px auto; 
+}
+#tallModal .modal-body p { margin-bottom: 900px }
+.a{
+    background-color:grey;width:0%;height:100%;
+}
+.b{
+    background-color:grey;width:10%;height:100%;
+}
+.c{
+    background-color:grey;width:10%;height:100%;
+}
+/*end of list of popup*/
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.text-center {
+    float: right;
+}
+.btnapp span {
+    font-size: 50px;
+    color: #FF5722;
+    display: inline-block;
+    z-index: 99;
+    margin-left: 35px;
+    height: 50px;
+    width: 50px;
+    transition: all .5s;
+}

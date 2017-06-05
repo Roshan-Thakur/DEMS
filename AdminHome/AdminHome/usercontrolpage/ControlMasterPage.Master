@@ -1,0 +1,270 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ControlMasterPage.master.cs" Inherits="AdminHome.usercontrolpage.ControlMasterPage" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>AdminDesboard</title>
+     <link id="Link1" runat="server" rel="shortcut-icone" href="~/ImageIcones/Admin.ico" type="image/x-icone" />
+     <link id="Link2" runat="server" rel="icon" href="~/ImageIcones/Admin.ico" type="image/x-icone" />
+
+  <link href="../bootstrap.3.3.7/content/Content/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="bootstrap.3.3.7/content/Content/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <%-- Gridview --%>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/css/footable.min.css" rel="stylesheet" type="text/css" />
+    <script src="../bootstrap.3.3.7/content/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/js/footable.min.js"></script>
+    <%-- Bootstap link to popup Start ---%>
+     <!-- Latest compiled and minified CSS -->
+       <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Latest compiled and minified JavaScript -->
+        <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+    <%-- End --%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+   
+    </asp:ContentPlaceHolder> 
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
+    <link href="../bootstrap.3.3.7/Sidebarcssjs/css/reset.css" rel="stylesheet" />
+    <link href="../bootstrap.3.3.7/Sidebarcssjs/css/style.css" rel="stylesheet" />
+    <script src="../bootstrap.3.3.7/Sidebarcssjs/js/modernizr.js"></script>
+</head>
+<body>
+    <form runat="server" id="form1"> 
+          <header class="cd-main-header">
+		<%--<a href="#0" class="cd-logo"><img src="Sidebarcssjs/img/cd-logo.svg" alt="Logo" /></a>--%>
+		
+		<div class="cd-search is-hidden">
+				<input type="search" placeholder="Search..." />
+		</div> <!-- cd-search -->
+
+		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+
+		<nav class="cd-nav">
+			<ul class="cd-top-nav">
+			
+				<li class="has-children account">
+					<a href="#0">				
+<img src="../bootstrap.3.3.7/images/roshan.jpg" />
+						Account
+					</a>
+					<ul>
+						<li><asp:LinkButton runat="server" ID="lnkmyaccount" OnClick="lnkmyaccount_Click">My Account</asp:LinkButton></li>
+						<li><asp:LinkButton runat="server" ID="lnkeditaccount" OnClick="lnkeditaccount_Click">Edit Account</asp:LinkButton></li>
+						<li><asp:LinkButton runat="server" OnClick="Unnamed_Click"><span class="glyphicon glyphicon-log-out" > Logout</span></asp:LinkButton></li>
+                        <li><asp:LinkButton runat="server" style="color:white;font-size:large" PostBackUrl="~/Dems/index.aspx" ><span class="glyphicon glyphicon-backward"> GO TO DEMS Website</span> </asp:LinkButton></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header> <!-- .cd-main-header -->
+	<main class="cd-main-content">
+		<nav class="cd-side-nav">
+			<ul>
+                <%--  border: 0;
+    width:73%;
+    margin-left: 11%; --%>
+				<li class="cd-label"><img runat="server" src="~/ImageIcones/dems.ico" style="border:0;width:73%;margin-left:15%" /></li>
+                <li class="has-children users"><a href="../AdminControlPanel/AdminHomeTable.aspx"><span class="glyphicon glyphicon-home" style="font-size:medium">  Home</span></a></li>
+				<li class="has-children users">
+					<a href="#0">ACADEMIC</a>					
+					<ul>					
+                            <li class="has-children users">
+				<a href="../AccademicManagement/HomeStudentAccademic.aspx">Students</a>					
+					<ul>
+						<li><a href="../AccademicManagement/PermotedStudentList.aspx">Old Students Entry</a></li>
+						<li><a href="../AccademicManagement/AdmissionDetails1.aspx">Admission Details</a></li>
+						<li><a href="#">Current StudentInfo</a></li>
+                        <li><a href="../AccademicManagement/AdmissionForm.aspx">Students Admission Form</a></li>
+                        <li><a href="../AccademicManagement/StudentPermotion.aspx">New Students Batch assign</a></li>
+                         <li><a href="../AccademicManagement/StudentPermotion.aspx">Students Promtion</a></li>
+					</ul>
+				</li>
+						</li>
+                <li class="has-children users">
+				<a href="../OriginalAttandenceSystem/AttandanceHome.aspx">Attendence</a>					
+					<ul>
+						<li><a href="../OriginalAttandenceSystem/AttandanceHome.aspx">Students Attendence</a></li>
+						<li><a href="../OriginalAttandenceSystem/AttandanceHome.aspx">Staff/Faculty Attendence</a></li>						
+					</ul>
+				</li>	
+                <li class="has-children users">
+				<a href="../ExaminationModules/HomeExamination.aspx">Examination</a>					
+					<ul>
+						<li><a href="../ExaminationModules/AddSubject.aspx">Subject Management</a></li>
+						<li><a href="../ExaminationModules/ClassWiseSubjectSetup.aspx">Sub.Wise Ques Pattern</a></li>	
+                        <li><a href="../ExaminationModules/AddGradeSystem.aspx">Grading</a></li>
+						<li><a href="../ExaminationModules/AddExamType.aspx">Exam Type</a></li>	
+                        <li><a href="../ExaminationModules/AddExamInfo.aspx">Exam Info</a></li>
+						<li><a href="../ExaminationModules/markentry.aspx">Marks Entry</a></li>
+                        <li><a href="../ExaminationModules/AddQuestionPaturn.aspx">Question Pattern</a></li>
+                        <li><a href="../ExaminationModules/UpdateMarks.aspx">Mark Update</a></li>												
+					</ul>
+				</li>	
+                <li class="has-children users">
+				<a href="#">Routine</a>					
+					<ul>
+						<li><a href="#">Building & Room Setting</a></li>
+						<li><a href="#0">Class Routine</a></li>	
+                        <li><a href="#0">Report</a></li>
+						<li><a href="#0">Set Time</a></li>					
+					</ul>
+				</li>	
+                <li class="has-children users">
+				<a href="../GuidTeacherManagement/HomeGuidTeacher.aspx">Teacher Guide</a>					
+					<ul>
+						<li><a href="../GuidTeacherManagement/AssignGuidTeacherfrm.aspx">Asign Guide teacher</a></li>
+						<li><a href="../GuidTeacherManagement/GuidTeacherByStudent.aspx">Guide Teacher Wise Student List</a></li>	                       				
+					</ul>
+				</li>												               
+					</ul>							            
+				<li class="has-children users">
+					<a href="#0">ADMINISTRATION</a>
+					
+					<ul>
+                         <li class="has-children users">
+				<a href="#">Finance</a>					
+					<ul>
+						<li><a href="#">Fee Managment</a></li>
+						<li><a href="#0">Fine  Managment </a></li>	
+                        <li><a href="#">Finance Report </a></li>	                       				
+					</ul>
+				</li>		
+                         <li class="has-children users">
+				<a href="../HumanResorceView/HumanResorcehome.aspx">Human Resouuce</a>					
+					<ul>
+						<li><a href="../HumanResorceView/employeediv.aspx">Employee</a></li>
+						<li><a href="../HumanResorceView/HumanResourceModule/PayrollHome.aspx">payroll </a></li>	                                             				
+					</ul>
+				</li>		
+                        <li class="has-children users">
+				<a href="../ControlPanelDiv/HomeControl.aspx">Control Panel</a>					
+					<ul>
+						<li><a href="#">Add User Type</a></li>
+						<li><a href="../ControlPanelDiv/AddStudentAccount.aspx">Add Student Account </a></li>	 
+                        	<li><a href="#0">Page Setup & Set privilege</a></li>
+						<li><a href="../ControlPanelDiv/AdduserAccount.aspx">Add User Account </a></li>	     
+                        <li><a href="#0">List of Students Account </a></li>	 
+                        	<li><a href="../ControlPanelDiv/StudentAccountList.aspx">List Student Account</a></li>
+						<li><a href="../ControlPanelDiv/UserAccountList.aspx">List of Account </a></li>	                                        				
+					</ul>
+				</li>	
+                         <li class="has-children users">
+				<a href="../AdminSettingView/AcademicSetting.aspx">Setting</a>					
+					<ul>
+						<li><a href="../AdminSettingView/AcademicSetting.aspx">Academic Setting</a></li>
+						<li><a href="../AdminSettingView/GeneralSetting.aspx">general Setting </a></li>	 
+                        		                                        				
+					</ul>
+			</li>	
+                         <li class="has-children users">
+				<a href="../WebsiteControl/WebsiteMaintanance.aspx">Website</a>					
+					<ul>
+						<li><a href="../WebsiteControl/WebsiteMaintanance.aspx">News</a></li>
+						<li><a href="../WebsiteControl/WebsiteMaintanance.aspx">Add President & Principal Speech </a></li>	 
+                        <li><a href="../WebsiteControl/WebsiteMaintanance.aspx">Event</a></li>
+						<li><a href="../WebsiteControl/WebsiteMaintanance.aspx">Update Social Link</a></li>	
+                         <li><a href="#0">Album</a></li>
+						<li><a href="#0">Slider</a></li>		                                        				
+					</ul>
+			</li>							
+					</ul>
+				</li>
+			</ul>
+
+			<ul>
+				<%--<li class="cd-label">Secondary</li>--%>
+				<li class="has-children users">
+					<a href="#">REPORT</a>
+					
+					<ul>
+                        <li class="has-children users">
+				<a href="../AccademicManagement/HomeStudentInfoReport.aspx">Sttudent Info</a>					
+					<ul>
+						<li><a href="../AccademicManagement/AdmissionDetails1.aspx">Individual Student Profile</a></li>
+						<li><a href="../AccademicManagement/StudentReport.aspx">Student Contact List </a></li>	 
+                        <li><a href="../AccademicManagement/StudentReport.aspx">parents Information List</a></li>
+						<li><a href="../AccademicManagement/AdmissionDetails1.aspx">Student List</a></li>	
+                         <li><a href="../AccademicManagement/StudentReport.aspx">Gurdian Information</a></li>
+						<li><a href="../AccademicManagement/StudentReport.aspx">admit ID Card</a></li>	
+                          <li><a href="#0">Gender Wise Student List</a></li>
+						<li><a href="../AccademicManagement/StudentReport.aspx">Gurdian Contact List</a></li>		                                        				
+					</ul>
+			</li>			
+                         <li class="has-children users">
+				<a href="../HumanResorceView/HomeReportStaff.aspx">Staff or Faculty</a>					
+					<ul>
+						<li><a href="../TeacherDesboard/EmpDetailsReport.aspx"> Profile Staff/Faculty</a></li>
+						<li><a href="../TeacherDesboard/EmpDetailsReport.aspx">Department Wise List </a></li>	 
+                        <li><a href="../TeacherDesboard/EmpDetailsReport.aspx">Blood Group wise List</a></li>
+						<li><a href="../TeacherDesboard/EmpDetailsReport.aspx">staff/Faculty List</a></li>	                         	                                        				
+					</ul>
+			</li>			<li class="has-children users">
+				<a href="#">Routine</a>					
+					<ul>
+						<li> <a href="#">Class Schedule</a></li>
+						<li><a href="#0">Exam Schedule </a></li>	                       	                         	                                        				
+					</ul>
+			</li>			
+                        <li class="has-children users">
+				<a href="../OriginalAttandenceSystem/AttandanceReportDiv.aspx">Attendance</a>					
+					<ul>
+						<li><a href="../OriginalAttandenceSystem/StudenceIndividualAttandanceImport.aspx"> Student Attendance</a></li>
+						<li><a href="../OriginalAttandenceSystem/StaffAndFacultyAttandance.aspx">Staff/Faculty Attendance </a></li>	    
+                        <li><a href="../OriginalAttandenceSystem/Attandancedetails.aspx">Staff/Faculty Attendance Report </a></li>	                       	                         	                                        				
+					</ul>
+			</li>			
+                          <li class="has-children users">
+				<a href="../ExaminationModules/ReportHome.aspx">Examination</a>					
+					<ul>
+						<li><a href="../ExaminationModules/ReportHome.aspx"> Exam Report</a></li>
+						<li><a href="../ExaminationModules/GenerateMarksheet.aspx">Dependency Convert Marks</a></li>	    
+                        <li><a href="../ExaminationModules/StudentSubjectList.aspx">Sudent Group Subject List</a></li>	 
+                        <li><a href="#0"> Exam Overview</a></li>
+						<li><a href="../ExaminationModules/MarksheetViewer.aspx">Dependency Marks Result</a></li>	    
+                        <li><a href="../ExaminationModules/TranferCertificate.aspx">Transfer Certificate</a></li>	 
+                        <li><a href="#0">Acedmic Transcript</a></li>	    
+                        <li><a href="../AccademicManagement/HomeStudentInfoReport.aspx">AdmidCard</a></li>	                      	                         	                                        				
+					</ul>
+			</li>							
+						
+					</ul>
+				</li>
+				<li class="has-children users">
+					<a href="../Notifications/Notificationform.aspx">NOTIFICATION</a>
+					
+					<ul>
+						<li><a href="../Notifications/Notificationform.aspx">Today's Absent Students</a></li>
+						<li><a href="../Notifications/Notificationform.aspx">Fail Students List</a></li>
+                        	<li><a href="../Notifications/Notificationform.aspx">Notice</a></li>
+						<li><a href="../Notifications/Notificationform.aspx">Greeting</a></li>
+                        <li><a href="../Notifications/Notificationform.aspx">Template</a></li>
+					</ul>
+				</li>				
+		</nav>
+              <div style="left:15%; position: absolute;top: 15%; height: 20%;">
+                   <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                   </asp:ContentPlaceHolder>
+              </div>
+        
+		 <!-- .content-wrapper -->
+	</main> <!-- .cd-main-content -->
+   
+    <asp:ContentPlaceHolder runat="server" ID="ContentScript">
+
+    </asp:ContentPlaceHolder>
+         <%--<script src="../bootstrap.3.3.7/Sidebarcssjs/js/jquery-2.1.4.js"></script>--%>
+        <script src="../bootstrap.3.3.7/Sidebarcssjs/js/jquery.menu-aim.js"></script>
+        <script src="../bootstrap.3.3.7/Sidebarcssjs/js/main.js"></script>
+    </form>
+     <script type="text/javascript">
+         $(function () {
+             $('[id*=gvTerritories]').footable();
+         });
+    </script>
+</body>
+</html>

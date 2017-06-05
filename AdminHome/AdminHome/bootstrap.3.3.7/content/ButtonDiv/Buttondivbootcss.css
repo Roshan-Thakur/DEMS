@@ -1,0 +1,101 @@
+﻿.button {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+    width: 70%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 12px;margin-top:25px;
+    float:left;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.student-btn {
+            margin: 50px 0px 50px 50px;
+        }
+        .student-btn1 {
+            margin: 50px 0px 50px 50px;
+
+        }
+
+
+
+/*navbar css start   */
+
+
+
+                        body {margin:0;}
+
+                        .topnav {
+                          overflow: hidden;
+                          background-color: #333;
+                        }
+
+                        .topnav a {
+                          float: left;
+                          display: block;
+                          color: #f2f2f2;
+                          text-align: center;
+                          padding: 14px 16px;
+                          text-decoration: none;
+                          font-size: 17px;
+                        }
+
+                        .topnav a:hover {
+                          background-color: #ddd;
+                          color: black;
+                        }
+
+                        .topnav .icon {
+                          display: none;
+                        }
+
+                        @media screen and (max-width: 600px) {
+                          .topnav a:not(:first-child) {display: none;}
+                          .topnav a.icon {
+                            float: right;
+                            display: block;
+                          }
+                        }
+
+                        @media screen and (max-width: 600px) {
+                          .topnav.responsive {position: relative;}
+                          .topnav.responsive .icon {
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                          }
+                          .topnav.responsive a {
+                            float: none;
+                            display: block;
+                            text-align: left;
+                          }
+
+                        }

@@ -1,0 +1,458 @@
+/* All Font */
+@font-face {
+    font-family: Roboto-Medium;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: Roboto-BoldItalic;
+    src: url(../fonts/Roboto-BoldItalic.ttf);
+}
+/* --------------------------------------------------------
+1. 					Start Header CSS
+-----------------------------------------------------------*/
+
+a{
+	color: #000;
+}
+a:hover{
+	color: #16b4ef;
+}
+.mainmenu {
+  padding: 12px 0;
+}
+.mainmenu ul#nav{
+	margin: 0;
+	padding: 0;
+}
+.mainmenu .navbar-default {
+  background: none;
+  border: none;
+  margin: 0;
+}
+.mainmenu .navbar-brand {
+  padding: 0 23px 0 0;
+  height: auto;
+}
+
+.header_area{background:#000;
+    width: 100%;}
+
+.header_login ul{
+	list-style: outside none none;
+	margin: 0;
+	padding: 0 0 0 14px;
+}
+.header_login > ul > li > a{	
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.mainmenu .nav.navbar-nav {
+  float: left;
+}
+body#home_one .emergency_number, body#home_one .emergency_number::after{
+	background: #f7c411 none repeat scroll 0 0;
+}
+.mainmenu .nav.navbar-nav > li > a {
+	text-transform: capitalize;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 400;
+	padding: 24px 0px 0px 62px;
+}
+.mainmenu .nav.navbar-nav li.dropdown > a{
+	background: url(img/dropdown_bg.png) no-repeat scroll 100% 50%;
+}
+.mainmenu .nav.navbar-nav a:hover{
+	color: #343434;
+}
+
+.header_top_area {
+  background: #313a45 none repeat scroll 0 0;
+  color: #fff;
+}
+.header_top_area ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.header_top_area li{
+	padding: 10px 0;
+}
+.header_top_area a{
+	color: #7a7e84;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-family: "Karla",sans-serif;
+}
+.header_top .left_header_top a > img{
+	margin-right: 12px;
+}
+.right_header_top .nav a {
+  padding: 0 14px;
+}
+.right_header_top .nav a:hover, .right_header_top .nav a:active,  .right_header_top .nav .open > a,  .right_header_top .nav .open > a:focus, .right_header_top  .nav .open > a:hover{
+	background: none;
+}
+
+/* --------------------------------------------------------
+ 					end Header CSS
+-----------------------------------------------------------*/
+
+
+/* --------------------------------------------------------
+2. 					Start slider CSS
+-----------------------------------------------------------*/
+.main_slider_area{
+	font-family: "Playfair Display",serif;
+	padding-bottom: 0px;
+	position: relative;
+}
+
+
+/* --------------------------------------------------------
+ 					end slider CSS
+-----------------------------------------------------------*/
+
+
+/* --------------------------------------------------------
+ 					Custom CSS For All
+-----------------------------------------------------------*/
+
+.header-top{
+	background:#000;
+	padding:7px;
+}
+.header-top ul li{
+	display:inline-block;
+	margin-right:10px;	
+}
+.header-top ul li a, .header-top ul li i{
+	color:#fff;
+	margin-right:5px;
+}
+
+.slide-caption{
+	margin-left:18% !important;
+	text-align:center;
+}
+.slide-caption h4{	
+	color: #fff;
+	font-size:28px;
+	font-family:Roboto-Medium;
+	text-transform:capitalize;		
+}
+.slide-caption h1{	
+	color: #fff;	
+	padding:10px 0px;
+	margin:5px 0px;
+	font-size:42px;
+	text-transform: uppercase;
+	font-family:Roboto-BoldItalic;
+	text-align:center;		
+}
+.slide-caption p{	
+	color: #fff;	
+	padding:10px;
+	margin:5px 0px;
+	font-size:23px;
+	text-transform:capitalize;
+	font-family:Roboto-Regular;	
+	line-height:32px;	
+}
+.slider-btn{
+	padding:15px 40px;
+	border-radius:7px;
+	color:#fff !important;
+	background:#c45707;
+}
+.welcome_area h3{
+	color:#2c2c2c;
+	padding-bottom:10px;
+	margin: 30px 0 0 0;
+	text-transform:capitalize;
+	font-family: Roboto-Bold !important;
+}
+.welcome_area p{
+	color:#464646;
+	padding-bottom:10px;
+	text-align:center;
+	font-size:18px;
+	font-family:Roboto-Regular;
+}
+.srvic-home{
+	margin-top:40px;
+}
+.srvic-home h4{
+	margin:14px 0px;
+	color:#561d10;
+	font-size:18px;
+	text-transform:capitalize;
+	font-family:Roboto-Bold;
+}
+
+.srvic-home p{
+	margin:14px 0px;
+	padding: 0 48px;
+	color:#561d10;
+	font-size:14px;
+	font-family:Roboto-Regular;
+}
+
+.read-more-btn-prctc{
+	color:#1cded7;
+	font-size: 15px;
+}
+
+
+
+.services-box:hover {
+    transition: all 200ms ease-in;   
+    transform: scale(1.1);
+}
+
+.footer_area{width: 100%;
+	background:url(../img/footer-bg.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	float:left;    margin-top: 10px;
+}
+	
+	
+.footer-txt {
+    width: 100%;  
+    float: left;
+    padding: 0 20px 0 25px;
+}
+.footer-txt p{padding:14px 0 0 0;
+              color:#99a6ac;}	
+	
+.footer-top{
+	padding:70px 0px;
+	height:auto;
+}
+.footer-top h3{
+	color:#fff;
+	font-family:Roboto-Regular;
+	font-size:20px;
+	border-bottom: solid 1px;
+	padding-bottom:10px;	
+}
+.footer-top ul {
+	margin-top:10px;
+	padding:5px;
+}
+.footer-top ul li{
+	list-style:none;
+	padding-bottom:10px;
+	color:#99a6ac;	
+}
+.footer-top ul li span{
+	color:#8dbb27;
+}
+
+.open-hours {
+    width: 100%;
+    float: left;
+    padding: 0 0 0 19px;
+}
+.social-media-footer{
+	width: 100%;
+    float: left;
+    padding: 0 0 0 78px;
+}
+
+.social-media-footer ul li{
+	display:inline-block;	
+	width:50px;
+	height:50px;
+	border-radius:100%;
+	text-align:center;
+}
+.social-media-footer ul li.facebook{
+	background:#3b5998;00aced
+}
+.social-media-footer ul li.twitter{
+	background:#00aced;
+}
+.social-media-footer ul li.linkedin{
+	background:#007ab9;
+}
+.social-media-footer ul li.instagram{
+	background:#8a3ab9;
+}
+.social-media-footer ul li i{
+	padding: 15px;
+    font-size: 20px;
+	color: #fff;
+}
+.footer_copyright{
+	background:#000;
+	padding:10px;
+	color:#fff;
+}
+.footer_copyright p{	
+	color:#fff;
+}
+.breadcrumb{
+	margin-top:20px;
+	background:none;
+	color:#fff;
+	font-size: 14px;
+}
+.breadcrumb li a, .breadcrumb li{
+	color:#1cded7;
+}
+.about-description, .our-people-description, .services-description{
+	margin-top:20px;
+	width: 100%;
+    float: left;
+}
+.about-description h1, .our-people-description h1, .services-description h1{
+	color:#363636;
+	font-size:24px;
+	text-transform:capitalize;
+	font-family:Roboto-Bold;
+	margin-bottom:15px;
+}
+.about-description p, .our-people-description p, .services-description p{
+	line-height:25px;
+}
+.about-description img{
+	margin-top:0px;
+}
+.our-people-description h2{
+	color:#642817;
+	font-size:25px;
+	text-transform: uppercase;
+	font-family:Roboto-Medium;
+	margin-bottom:15px;
+}
+
+.about-description p{
+	font-size: 16px;
+    color: #2c2c2c;
+    margin: 0 0 48px 0;
+    line-height: 26px;}
+
+.our-people-description ul{
+	padding:15px;
+}
+.our-people-description ul li{
+	color:#642817;
+	font-size:18px;
+	font-family:Roboto-Regular;
+}
+.ouvr-people-list-thumb h3{
+	font-size:20px;
+	padding:10px;
+	font-family:Roboto-Medium;
+}
+.ouvr-people-list-thumb h4{
+	font-size:15px;
+	font-family:Roboto-Medium;
+	color:#F00;
+}
+.services-gride{
+	margin-top:20px;
+}
+.services-gride h3{
+	font-family:Roboto-Medium;
+	font-size:28px;
+	text-transform:uppercase;
+	text-align:left;
+	color:#642817;
+}
+.services-gride p{
+	font-family:Roboto-Regular;	
+	text-align:left;
+	padding-top:10px;
+	
+}
+
+/*social icons starts*/
+
+
+[class*="entypo-"]:before {
+   font-family: "entypo", sans-serif;
+}
+a { 
+   text-decoration: none;
+}
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+#sticky-social {
+   left: 0;
+   position: fixed;
+   top: 120px;
+   z-index: 99;
+
+}
+#sticky-social a {
+   background: #333;
+   color: #fff;
+   display: block;
+   height: 35px;
+   font: 16px "Open Sans", sans-serif;
+   line-height: 35px;
+   position: relative;
+   text-align: center;
+   width: 35px;
+}
+#sticky-social a span {
+   line-height: 35px;
+   left: -120px;
+   position: absolute;
+   text-align:center;
+   width:120px;
+}
+#sticky-social a:hover span {
+   left: 100%;
+}
+#sticky-social a[class*="facebook"],
+#sticky-social a[class*="facebook"]:hover,
+#sticky-social a[class*="facebook"] span { background: #3b5998; }
+
+#sticky-social a[class*="twitter"],
+#sticky-social a[class*="twitter"]:hover,
+#sticky-social a[class*="twitter"] span { background: #00aced; }
+
+#sticky-social a[class*="gplus"],
+#sticky-social a[class*="gplus"]:hover,
+#sticky-social a[class*="gplus"] span { background: #dd4b39; }  
+
+#sticky-social a[class*="linkedin"],
+#sticky-social a[class*="linkedin"]:hover,
+#sticky-social a[class*="linkedin"] span { background: #007bb6; }  
+
+/*social icons ends*/
+
+  /*go-top icon starts*/
+
+.bottom-footer .fa
+{
+    font-size:2.5rem;
+    padding:.7rem;
+}
+
+.back-to-top {
+    cursor: pointer;
+   float: right;
+   
+    }
+
+a#back-to-top {
+    color: #fff;
+}
+    /*go-top icon ends*/

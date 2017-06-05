@@ -1,0 +1,15 @@
+D:\dotnet\AdminHome\AdminHome\bin\AdminHome.dll
+D:\dotnet\AdminHome\AdminHome\bin\AdminHome.pdb
+D:\dotnet\AdminHome\AdminHome\obj\Debug\AdminHome.dll
+D:\dotnet\AdminHome\AdminHome\obj\Debug\AdminHome.pdb
+D:\dotnet\AdminHome\AdminHome\obj\Debug\AdminHome.csprojResolveAssemblyReference.cache
+D:\dotnet\AdminHome\AdminHome\bin\itextsharp.dll
+D:\dotnet\AdminHome\AdminHome\bin\itextsharp.pdfa.dll
+D:\dotnet\AdminHome\AdminHome\bin\itextsharp.xml
+D:\AdminHome\AdminHome\bin\AdminHome.dll.config
+D:\AdminHome\AdminHome\bin\AdminHome.dll
+D:\AdminHome\AdminHome\bin\AdminHome.pdb
+D:\AdminHome\AdminHome\bin\itextsharp.xml
+D:\AdminHome\AdminHome\obj\Debug\AdminHome.csprojResolveAssemblyReference.cache
+D:\AdminHome\AdminHome\obj\Debug\AdminHome.dll
+D:\AdminHome\AdminHome\obj\Debug\AdminHome.pdb

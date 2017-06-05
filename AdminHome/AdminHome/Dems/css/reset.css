@@ -1,0 +1,331 @@
+/* --------------------------------------------------------
+1. Base or Reset or common CSS
+-----------------------------------------------------------*/
+html,
+body {
+    height: 100%;
+}
+body{
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    color: #666666;
+    overflow-x: hidden;
+}
+p{
+    color: #666666;
+}
+::-moz-selection {
+  color: #fff;
+  background: #313a45;
+}
+::selection {
+  color: #fff;
+  background: #313a45;
+}
+.floatleft { 
+    float: left;
+}
+.floatright { 
+    float: right;
+}
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignleft-md {
+    float: left;
+    margin-right: 58px;
+}
+.alignleft-sm {
+    float: left;
+    margin-right: 33px;
+}
+.alignleft-20 {
+    float: left;
+    margin-right: 20px;
+}
+.alignright-20 {
+    float: right;
+    margin-left: 20px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+.content-center {
+    text-align: center;
+}
+.content-left {
+    text-align: left;
+}
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.clear {
+  clear: both;
+  height: 0; 
+  font-size: 0; 
+  line-height: 0; 
+  overflow: hidden;
+}
+.fix { 
+    overflow: hidden;
+}
+
+/* ------------------------------------
+        start anchor & button styles
+---------------------------------------*/
+
+a:focus { 
+    outline: 0px solid;
+}
+a { 
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    text-decoration: none;
+    color: #000;
+}
+a:hover { 
+    color: #16b4ef;
+    text-decoration: none;
+}
+/* ------------------------------------
+        start menu styles
+---------------------------------------*/
+
+.nav > li > a:focus, .nav > li > a:hover{
+  background: none;
+}
+ul.menu{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul.menu > li{
+    float: left;
+}
+ul.clearul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul.clearul > li{
+    
+}
+
+
+/* ------------------------------------
+        End menu styles
+---------------------------------------*/
+
+
+/* ------------------------------------
+        start image styles
+---------------------------------------*/
+
+.no_bg{
+    background: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ------------------------------------
+        end image styles
+---------------------------------------*/
+
+
+/* ------------------------------------
+        start heading styles
+---------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: 400;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+}
+h1{
+    font-size: 48px;
+    color: #131e2a;
+}
+h2{
+    font-size: 44px;
+    color: #131e2a;
+}
+h3{
+    font-size: 30px;
+    color: #131e2a;
+}
+h4{
+    font-size: 24px;
+    color: #131e2a;
+}
+h5{
+    font-size: 20px;
+    color: #131e2a;
+}
+h6{
+    font-size: 14px;
+    color: #424c55;
+}
+
+/* ------------------------------------
+        end heading styles
+---------------------------------------*/
+
+
+/* ------------------------------------
+  start revolution slider arrow styles
+---------------------------------------*/
+
+.tp-rightarrow.round, .tp-leftarrow.round{
+  
+}
+.tp-leftarrow.round{
+  background: url(assets/new-left-arrow.jpg) #313a45 no-repeat top left;
+  width: 26px;
+  height: 31px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.tp-leftarrow.round:hover{
+  background: url(assets/new-left-hover-arrow.jpg) #1cded7 no-repeat top left;
+}
+.tp-rightarrow.round{
+  background: url(assets/new-right-arrow.jpg) #313a45 no-repeat top right;
+  width: 26px;
+  height: 31px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.tp-rightarrow.round:hover{
+  background: url(assets/new-right-hover-arrow.jpg) #1cded7 no-repeat top right;
+}
+
+
+/* ------------------------------------
+  end revolution slider arrow styles
+---------------------------------------*/
+
+
+
+
+/* ------------------------------------
+         start responsive styles
+---------------------------------------*/
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+.uk-overlay-icon::before {
+  padding: 5.7% 0;
+}
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+body{
+  font-size: 12px;
+}
+h1{
+    font-size: 26px;
+}
+h2{
+    font-size: 22px;
+}
+h3{
+    font-size: 20px;
+}
+h4{
+    font-size: 17px;
+}
+h5{
+    font-size: 15px;
+}
+h6{
+    font-size: 13px;
+}
+.btn {
+  font-size: 13px;
+  padding: 7px 14px;
+}
+.btn.btn-blue {
+  font-size: 7px;
+  padding: 4px;
+}
+.btn.btn-primary {
+  font-size: 11px;
+  padding: 8px 16px;
+}
+a.btn.btn-black {
+  padding: 9px;
+  font-size: 11px;
+}
+.btn.btn-md {
+  padding: 8px 16px;
+}
+
+
+
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+
+
+.special_offer_sub > img {
+  height: auto;
+  position: absolute;
+  right: calc(50% - 117px);
+  top: 0;
+  width: 150px;
+}
+
+
+
+
+}
+
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+
+.special_offer_sub > img {
+  height: auto;
+  position: absolute;
+  right: calc(50% - 138px);
+  top: 0;
+  width: 150px;
+}
+
+
+}
